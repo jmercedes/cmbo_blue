@@ -1,4 +1,6 @@
 CmboBlue::Application.routes.draw do
+  
+  root :to => 'pages#home'
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
