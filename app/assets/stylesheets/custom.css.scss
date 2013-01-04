@@ -66,13 +66,20 @@ h3{
 
 #recent_news_items{
 	
-	padding: 0 19px 0 19px;
+	padding: 0 19px 0 0px;
 }
 
 #recent_news_items p:after{
 	
 	padding: 10px 19px 0 0;
 }
+
+#recent_news_items p img{
+	
+	border:none;
+}
+
+
 
 [class*="span"] {
 float: left;
