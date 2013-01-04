@@ -1,1 +1,14 @@
-<%= render '/refinery/content_page' %>
+<div class="row">
+<div class="span3">
+
+<ul>
+  <% @page.children.each do |child| %>
+      <li><%= link_to child.title, child.url %></li>
+  <% end %>
+</ul>
+
+
+
+<%= raw @page.content_for(:side_body) %></div>
+<div class="span8 dotted bodypartpadding"><%= raw @page.content_for(:body) %></div>
+</div>
