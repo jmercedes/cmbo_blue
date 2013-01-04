@@ -5,7 +5,7 @@
   <body>
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
+    <div class="container">
       <header id="header">
         <%= render '/refinery/header' -%>
       </header>

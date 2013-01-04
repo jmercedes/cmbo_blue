@@ -1,29 +1,28 @@
-<%= render '/refinery/content_page' %>
-
+<div class="content">
 <!-- Nivo Slider -->
-<div class="theme-default" id="slider">
+
+<div class="theme-default" id="slider">  
     <% @page.images.each do |img| %>
+      
         <%= image_tag img.url %>
     <% end %>
 </div>
 
 <div class="row">
 
-<div class="span3">
-<%= raw @page.content_for(:box_one) %>
+<div class="span4"><%= raw @page.content_for(:box_one) %></div>
+
+<div class="span4 dotted"><% @items = Refinery::News::Item.latest(2) %>
+<%= render :partial => '/refinery/news/items/recent_posts' %></div>
+
+<div class="span4 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(2) %>
+<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %></div>
 </div>
 
-<div class="span3">
-<%= raw @page.content_for(:box_two) %>
-</div>
-
-<div class="span3">
-<%= raw @page.content_for(:box_three) %>
+<div id="separator"></div>
+<div class="row">
+  <div class="span8"><%= raw @page.content_for(:box_two) %></div>
+  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 </div>
 
 </div>
-
-
-
-
-<%= raw @page.content_for(:box_four) %>

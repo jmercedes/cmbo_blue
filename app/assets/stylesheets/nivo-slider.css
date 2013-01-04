@@ -117,8 +117,8 @@
 }
 
 #slider_frame {
-    padding: 0; 
-    margin-bottom: 0;
-    background:url(slide-saperator.png) no-repeat bottom center;
-    padding-bottom: 9px;
+	padding: 0;
+	margin-bottom: 0;
+	background: url(slide-saperator.png) no-repeat bottom center;
+	padding-bottom: 9px;
 }

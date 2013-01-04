@@ -1,0 +1,14 @@
+
+<nav id="recent_news_items">
+  <h2>Blog<%#= t('.Blog') %></h2>
+
+    <% @blog_posts.each do |post| %>
+      <p><strong><%= link_to post.title, refinery.blog_post_path(post) %></strong></p>
+        <p><%= truncate  post.body, :length => 150,
+                       :omission => " ...", :preserve_html_tags => true %>
+
+      <hr>
+      </p>
+
+    <% end %>
+</nav>
