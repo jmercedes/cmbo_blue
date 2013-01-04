@@ -19,6 +19,7 @@ end
 # in production environments by default.
 
 gem 'libv8', '~> 3.11.8'
+gem "psych", "~> 1.3.4"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
