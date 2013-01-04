@@ -170,6 +170,10 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.9)
+    refinerycms-inquiries (2.0.3)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 2.0.1)
+      refinerycms-settings (~> 2.0.1)
     refinerycms-news (2.0.1)
       friendly_id (~> 4.0.1)
       refinerycms-core (~> 2.0.1)
@@ -235,6 +239,7 @@ DEPENDENCIES
   refinerycms (~> 2.0.0)
   refinerycms-blog (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
+  refinerycms-inquiries (~> 2.0.0)
   refinerycms-news (~> 2.0.0)
   sass-rails (~> 3.2.3)
   sqlite3
