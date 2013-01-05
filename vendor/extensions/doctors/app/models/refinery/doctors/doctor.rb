@@ -7,7 +7,7 @@ module Refinery
 
       acts_as_indexed :fields => [:prefix, :full_name, :bio, :specialty, :branch, :schedule, :location]
 
-      validates :prefix, :presence => true, :uniqueness => true
+      validates :prefix, :presence => true
     end
   end
 end
