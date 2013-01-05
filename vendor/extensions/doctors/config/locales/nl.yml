@@ -1,0 +1,33 @@
+nl:
+  refinery:
+    plugins:
+      doctors:
+        title: Doctors
+    doctors:
+      admin:
+        doctors:
+          actions:
+            create_new: Maak een nieuwe Doctor
+            reorder: Wijzig de volgorde van de Doctors
+            reorder_done: Klaar met het wijzingen van de volgorde van de Doctors
+          records:
+            title: Doctors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Doctors. Druk op 'Maak een nieuwe Doctor' om de eerste aan te maken.
+          doctor:
+            view_live_html: Bekijk deze doctor op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze doctor
+            delete: Verwijder deze doctor voor eeuwig
+      doctors:
+        show:
+          other: Andere Doctors
+  activerecord:
+    attributes:
+      'refinery/doctors/doctor':
+        prefix: Prefix
+        full_name: Full Name
+        bio: Bio
+        specialty: Specialty
+        branch: Branch
+        schedule: Schedule
+        location: Location

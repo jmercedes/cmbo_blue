@@ -65,3 +65,5 @@ gem 'refinerycms-inquiries', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 
 
+
+gem 'refinerycms-doctors', :path => 'vendor/extensions'

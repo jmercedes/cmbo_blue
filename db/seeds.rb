@@ -17,3 +17,6 @@ Refinery::News::Engine.load_seed
 
 # Added by Refinery CMS Inquiries engine
 Refinery::Inquiries::Engine.load_seed
+
+# Added by Refinery CMS Doctors extension
+Refinery::Doctors::Engine.load_seed

@@ -1,0 +1,33 @@
+en:
+  refinery:
+    plugins:
+      doctors:
+        title: Doctores
+    doctors:
+      admin:
+        doctors:
+          actions:
+            create_new: Add New Doctor
+            reorder: Reorder Doctors
+            reorder_done: Done Reordering Doctors
+          records:
+            title: Doctores
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Doctors yet. Click "Add New Doctor" to add your first doctor.
+          doctor:
+            view_live_html: View this doctor live <br/><em>(opens in a new window)</em>
+            edit: Edit this doctor
+            delete: Remove this doctor forever
+      doctors:
+        show:
+          other: Otros Doctores
+  activerecord:
+    attributes:
+      'refinery/doctors/doctor':
+        prefix: Prefix
+        full_name: Full Name
+        bio: Bio
+        specialty: Specialty
+        branch: Branch
+        schedule: Schedule
+        location: Location

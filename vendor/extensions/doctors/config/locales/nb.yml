@@ -1,0 +1,33 @@
+nb:
+  refinery:
+    plugins:
+      doctors:
+        title: Doctors
+    doctors:
+      admin:
+        doctors:
+          actions:
+            create_new: Lag en ny Doctor
+            reorder: Endre rekkefølgen på Doctors
+            reorder_done: Ferdig å endre rekkefølgen Doctors
+          records:
+            title: Doctors
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Doctors enda. Klikk på "Lag en ny Doctor" for å legge til din første doctor.
+          doctor:
+            view_live_html: Vis hvordan denne doctor ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne doctor
+            delete: Fjern denne doctor permanent
+      doctors:
+        show:
+          other: Andre Doctors
+  activerecord:
+    attributes:
+      'refinery/doctors/doctor':
+        prefix: Prefix
+        full_name: Full Name
+        bio: Bio
+        specialty: Specialty
+        branch: Branch
+        schedule: Schedule
+        location: Location

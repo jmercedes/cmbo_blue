@@ -1,0 +1,35 @@
+zh-CN:
+  refinery:
+    plugins:
+      doctors:
+        title: Doctors
+    doctors:
+      admin:
+        doctors:
+          actions:
+            create_new: 建立新的 Doctor
+            reorder: 对 Doctors 重新排序
+            reorder_done: 对 Doctors 的重新排序结束
+          records:
+            title: Doctors
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Doctors yet. Click "Add New Doctor" to add your first doctor.
+            no_items_yet: 目前没有 Doctors . 点击 "Add New Doctor" 创建一个doctor.
+          doctor:
+            view_live_html: 查看 doctor 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 doctor
+            delete: 永久删除 doctor
+      doctors:
+        show:
+          other: 其他 Doctors
+  activerecord:
+    attributes:
+      'refinery/doctors/doctor':
+        prefix: Prefix
+        full_name: Full Name
+        bio: Bio
+        specialty: Specialty
+        branch: Branch
+        schedule: Schedule
+        location: Location

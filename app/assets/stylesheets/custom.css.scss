@@ -15,6 +15,10 @@ h3{
 	font-size:16px;
 }
 
+strong {
+	color: #08C;
+
+}
 
 #logo {
     background:url(logo_cmbo.png) no-repeat;
@@ -257,6 +261,43 @@ p img {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+}
+
+section#body{
+	width:600px;
+	float:right;
+	border-left: 2px dotted #bbd5e5;
+	padding: 0 0 0 30px;
+	margin: 0 0 20px 0;
+}
+
+
+section#side_body{
+	width:250px;
+	float:right;
+	margin:0;
+}
+
+/*
+#body_content_title{
+	width:600px;
+	float:left;
+}
+
+*/
+
+#body_content_left{
+	width:650px;
+	float:left;
+	border-right: 2px dotted #bbd5e5;	
+	padding: 0 30px 0 0;
+	margin: 0 0 20px 0;
+}
+
+#body_content_right{
+	width:230px;
+	float:right;
+	
 }
 
 /* Left Column list */

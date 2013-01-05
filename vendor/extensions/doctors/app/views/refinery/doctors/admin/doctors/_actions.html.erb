@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Doctors::Admin::DoctorsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.doctors_admin_doctors_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_doctors_admin_doctor_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Doctors::Admin::DoctorsController.sortable? && ::Refinery::Doctors::Doctor.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Doctors"),
+                 refinery.doctors_admin_doctors_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Doctors"),
+                 refinery.doctors_admin_doctors_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

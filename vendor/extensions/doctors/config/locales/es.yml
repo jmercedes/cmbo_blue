@@ -1,0 +1,34 @@
+es:
+  refinery:
+    plugins:
+      doctors:
+        title: Doctores
+#        article: masculino/femenino
+    doctors:
+      admin:
+        doctors:
+          actions:
+            create_new: Crear nuevo doctor
+            reorder: Reordenar doctors
+            reorder_done: Reordenación de doctors completada
+          records:
+            title: Doctors
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay doctors todavía. Pulsa en "Crear nuevo Doctor" para crear tu primer doctor.
+          doctor:
+            view_live_html: Ver este doctor como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este doctor
+            delete: Borrar este doctor para siempre
+      doctors:
+        show:
+          other: Otros doctors
+  activerecord:
+    attributes:
+      'refinery/doctors/doctor':
+        prefix: Prefix
+        full_name: Full Name
+        bio: Bio
+        specialty: Specialty
+        branch: Branch
+        schedule: Schedule
+        location: Location

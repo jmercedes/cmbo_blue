@@ -1,0 +1,42 @@
+<div class="clearfix">
+
+<div class="span3 dotted">
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="doctors">
+      <% @doctors.each do |doctor| %>
+        <li>
+          <%= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+</div>
+
+
+<% content_for :body do %>
+  <section>
+    <p>
+      <h1><%= @doctor.prefix + ' ' + @doctor.full_name %></h1>
+      <h2><%= @doctor.specialty %></h2>
+    </p>
+  </section>
+    <section>
+    <h1>Biografía</h1>
+    <p>
+      <%=raw @doctor.bio %>
+    </p>
+  </section>
+  <section>
+    <strong>Horario: </strong><%=raw @doctor.schedule %>
+  </section>
+  <section>
+    <strong>Consultorio: </strong><%=raw @doctor.location %>
+  </section>
+<% end %>
+
+
+<%= render '/refinery/content_page' %>

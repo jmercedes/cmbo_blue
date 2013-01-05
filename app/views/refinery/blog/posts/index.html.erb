@@ -1,3 +1,4 @@
+<div class="clearfix">
 <% content_for :body_content_left do %>
   <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
@@ -18,3 +19,4 @@
 
 <%= render :partial => "/refinery/content_page" %>
 <% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
+</div>
