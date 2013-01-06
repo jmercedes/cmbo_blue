@@ -3,14 +3,17 @@
 <div class="span3 dotted">
 <% content_for :side_body do %>
   <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="doctors">
+    <h2>Otros Especialistas<%#= t('.other') %></h2>
+  
       <% @doctors.each do |doctor| %>
-        <li>
-          <%= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
-        </li>
+        <% if @doctor.branch == doctor.branch && @doctor.full_name != doctor.full_name %>
+          <ul id="doctors">
+            <li>
+              <%= link_to doctor.prefix + ' ' + doctor.full_name, refinery.doctors_doctor_path(doctor) %>
+            </li>
+          </ul>  
       <% end %>
-    </ul>
+    <% end %>
   </aside>
 <% end %>
 

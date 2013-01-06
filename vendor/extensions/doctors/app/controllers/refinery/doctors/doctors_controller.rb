@@ -22,11 +22,15 @@ module Refinery
     protected
 
       def find_all_doctors
-        @doctors = Doctor.order('position ASC')
+        @doctors = Doctor.order('position ASC').page(params[:page]).per_page(2)
       end
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/doctors").first
+      end
+      
+      def branch
+        present(@page)
       end
 
     end

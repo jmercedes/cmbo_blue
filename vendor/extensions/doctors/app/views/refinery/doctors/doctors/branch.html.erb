@@ -12,6 +12,7 @@
 
 <% content_for :body do %>
     <% @doctors.each do |doctor| %>
+
       
       <p><strong><%=  doctor.prefix + ' ' + doctor.full_name %></strong><br>
       <%=  doctor.specialty %></p>
@@ -21,9 +22,7 @@
       <hr>
 
         <%#= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
-        
     <% end %>
-    <%= will_paginate @doctors %>
 <% end %>
 
 
