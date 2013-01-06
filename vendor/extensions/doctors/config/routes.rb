@@ -2,7 +2,7 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :doctors do
-    resources :doctors, :path => '', :only => [:index, :show, :branch]
+    resources :doctors, :path => '', :only => [:index, :show]
   end
 
   # Admin routes
