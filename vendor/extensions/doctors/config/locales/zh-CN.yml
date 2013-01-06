@@ -1,10 +1,25 @@
 zh-CN:
   refinery:
     plugins:
+      branches:
+        title: Branches
       doctors:
         title: Doctors
     doctors:
       admin:
+        branches:
+          actions:
+            create_new: 建立新的 Branch
+            reorder: 对 Branches 重新排序
+            reorder_done: 对 Branches 的重新排序结束
+          records:
+            title: Branches
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Branches . 点击 "Add New Branch" 创建一个branch.
+          branch:
+            view_live_html: 查看 branch 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 branch
+            delete: 永久删除 branch
         doctors:
           actions:
             create_new: 建立新的 Doctor
@@ -12,20 +27,23 @@ zh-CN:
             reorder_done: 对 Doctors 的重新排序结束
           records:
             title: Doctors
-            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
-
-            # There are no Doctors yet. Click "Add New Doctor" to add your first doctor.
+            sorry_no_results: 对不起，未找到结果。
             no_items_yet: 目前没有 Doctors . 点击 "Add New Doctor" 创建一个doctor.
           doctor:
             view_live_html: 查看 doctor 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 doctor
             delete: 永久删除 doctor
+      branches:
+        show:
+          other: 其他 Branches
       doctors:
         show:
           other: 其他 Doctors
   activerecord:
     attributes:
-      'refinery/doctors/doctor':
+      refinery/doctors/branch:
+        name: Name
+      refinery/doctors/doctor:
         prefix: Prefix
         full_name: Full Name
         bio: Bio

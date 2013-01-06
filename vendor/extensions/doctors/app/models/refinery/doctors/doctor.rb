@@ -8,6 +8,7 @@ module Refinery
       acts_as_indexed :fields => [:prefix, :full_name, :bio, :specialty, :branch, :schedule, :location]
 
       validates :prefix, :presence => true
+      #has_many :branches
     end
   end
 end

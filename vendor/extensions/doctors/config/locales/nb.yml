@@ -1,10 +1,27 @@
 nb:
   refinery:
     plugins:
+      branches:
+        title: Branches
       doctors:
         title: Doctors
     doctors:
       admin:
+        branches:
+          actions:
+            create_new: Lag en ny Branch
+            reorder: Endre rekkefølgen på Branches
+            reorder_done: Ferdig å endre rekkefølgen Branches
+          records:
+            title: Branches
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Branches enda. Klikk på "Lag en ny Branch"
+              for å legge til din første branch.
+          branch:
+            view_live_html: Vis hvordan denne branch ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne branch
+            delete: Fjern denne branch permanent
         doctors:
           actions:
             create_new: Lag en ny Doctor
@@ -13,17 +30,24 @@ nb:
           records:
             title: Doctors
             sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Doctors enda. Klikk på "Lag en ny Doctor" for å legge til din første doctor.
+            no_items_yet: Det er ingen Doctors enda. Klikk på "Lag en ny Doctor" for
+              å legge til din første doctor.
           doctor:
-            view_live_html: Vis hvordan denne doctor ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            view_live_html: Vis hvordan denne doctor ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
             edit: Rediger denne doctor
             delete: Fjern denne doctor permanent
+      branches:
+        show:
+          other: Andre Branches
       doctors:
         show:
           other: Andre Doctors
   activerecord:
     attributes:
-      'refinery/doctors/doctor':
+      refinery/doctors/branch:
+        name: Name
+      refinery/doctors/doctor:
         prefix: Prefix
         full_name: Full Name
         bio: Bio

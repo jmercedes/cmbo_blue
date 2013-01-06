@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Doctors::Admin::BranchesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.doctors_admin_branches_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_doctors_admin_branch_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Doctors::Admin::BranchesController.sortable? && ::Refinery::Doctors::Branch.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Branches"),
+                 refinery.doctors_admin_branches_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Branches"),
+                 refinery.doctors_admin_branches_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
