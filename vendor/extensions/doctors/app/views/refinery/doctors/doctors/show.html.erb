@@ -1,14 +1,15 @@
 <div class="clearfix">
-
 <div class="span3 dotted">
 <% content_for :side_body do %>
   <aside>
     <h2><%= t('.other') %></h2>
     <ul id="doctors">
       <% @doctors.each do |doctor| %>
+        <% if doctor.branch == @doctor.branch && doctor.full_name != @doctor.full_name %>
         <li>
-          <%= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
+          <%= link_to doctor.prefix + ' ' + doctor.full_name, refinery.doctors_doctor_path(doctor) %>
         </li>
+        <% end %>
       <% end %>
     </ul>
   </aside>
@@ -16,7 +17,7 @@
 
 </div>
 
-
+<div class="clearfix">
 <% content_for :body do %>
   <section>
     <p>

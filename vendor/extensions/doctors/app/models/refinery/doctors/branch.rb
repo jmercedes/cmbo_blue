@@ -7,7 +7,7 @@ module Refinery
       acts_as_indexed :fields => [:name]
 
       validates :name, :presence => true, :uniqueness => true
-      #belongs_to :doctor
+      belongs_to :doctor
     end
   end
 end

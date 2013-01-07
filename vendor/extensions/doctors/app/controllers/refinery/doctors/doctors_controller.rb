@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_doctors
-        @doctors = Doctor.order('position ASC')
+        @doctors = Doctor.order('branch ASC')
       end
 
       def find_page
