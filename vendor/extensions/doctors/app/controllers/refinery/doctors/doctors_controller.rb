@@ -22,11 +22,7 @@ module Refinery
     protected
 
       def find_all_doctors
-<<<<<<< HEAD
-        @doctors = Doctor.order('position ASC').page(params[:page]).per_page(2)
-=======
         @doctors = Doctor.order('branch ASC')
->>>>>>> scaffold-for-branch
       end
 
       def find_page
