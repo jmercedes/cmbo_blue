@@ -12,11 +12,6 @@
             </li>
           </ul>  
 
-        <% if doctor.branch == @doctor.branch && doctor.full_name != @doctor.full_name %>
-        <li>
-          <%= link_to doctor.prefix + ' ' + doctor.full_name, refinery.doctors_doctor_path(doctor) %>
-        </li>
-        <% end %>
       <% end %>
     <% end %>
   </aside>

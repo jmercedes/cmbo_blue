@@ -276,8 +276,15 @@ section#body{
 
 
 section#side_body{
+	width:250px;
+	float:left;
+	margin:0;
+}
+
+section#content_right{
 	width:230px;
 	float:right;
+	padding-left:20px;
 	margin:0;
 }
 
