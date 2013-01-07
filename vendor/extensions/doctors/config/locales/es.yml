@@ -1,11 +1,27 @@
 es:
   refinery:
     plugins:
+      branches:
+        title: Branches
       doctors:
         title: Doctores
-#        article: masculino/femenino
     doctors:
       admin:
+        branches:
+          actions:
+            create_new: Crear nuevo branch
+            reorder: Reordenar branches
+            reorder_done: Reordenación de branches completada
+          records:
+            title: Branches
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay branches todavía. Pulsa en "Crear nuevo Branch" para
+              crear tu primer branch.
+          branch:
+            view_live_html: Ver este branch como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este branch
+            delete: Borrar este branch para siempre
         doctors:
           actions:
             create_new: Crear nuevo doctor
@@ -14,17 +30,24 @@ es:
           records:
             title: Doctors
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay doctors todavía. Pulsa en "Crear nuevo Doctor" para crear tu primer doctor.
+            no_items_yet: No hay doctors todavía. Pulsa en "Crear nuevo Doctor" para
+              crear tu primer doctor.
           doctor:
-            view_live_html: Ver este doctor como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este doctor como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
             edit: Editar este doctor
             delete: Borrar este doctor para siempre
+      branches:
+        show:
+          other: Otros branches
       doctors:
         show:
           other: Otros doctors
   activerecord:
     attributes:
-      'refinery/doctors/doctor':
+      refinery/doctors/branch:
+        name: Name
+      refinery/doctors/doctor:
         prefix: Prefix
         full_name: Full Name
         bio: Bio

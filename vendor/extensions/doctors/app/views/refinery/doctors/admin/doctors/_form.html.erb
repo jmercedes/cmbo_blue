@@ -10,6 +10,7 @@
     <%#= f.select_tag :prefix, options_for_select([ "Dr.", "Dra."], "Dr.") %>
 
   </div>
+
   
   <div class='field'>
     <%= f.label :full_name -%>
@@ -46,7 +47,8 @@
   <div class='field'>
     <%= f.label :branch -%>
     <%= f.text_field :branch  -%>
-
+    <%#= f.select(:branch, "doctor_id", Doctor.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+  
   </div>
   
   <div class='field'>

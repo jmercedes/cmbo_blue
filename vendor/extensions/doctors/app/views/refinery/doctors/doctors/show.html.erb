@@ -1,17 +1,24 @@
 <div class="clearfix">
-
 <div class="span3 dotted">
 <% content_for :side_body do %>
   <aside>
     <h2>Otros Especialistas<%#= t('.other') %></h2>
   
       <% @doctors.each do |doctor| %>
+<<<<<<< HEAD
         <% if @doctor.branch == doctor.branch && @doctor.full_name != doctor.full_name %>
           <ul id="doctors">
             <li>
               <%= link_to doctor.prefix + ' ' + doctor.full_name, refinery.doctors_doctor_path(doctor) %>
             </li>
           </ul>  
+=======
+        <% if doctor.branch == @doctor.branch && doctor.full_name != @doctor.full_name %>
+        <li>
+          <%= link_to doctor.prefix + ' ' + doctor.full_name, refinery.doctors_doctor_path(doctor) %>
+        </li>
+        <% end %>
+>>>>>>> scaffold-for-branch
       <% end %>
     <% end %>
   </aside>
@@ -19,7 +26,7 @@
 
 </div>
 
-
+<div class="clearfix">
 <% content_for :body do %>
   <section>
     <p>
@@ -43,3 +50,4 @@
 
 
 <%= render '/refinery/content_page' %>
+</div>

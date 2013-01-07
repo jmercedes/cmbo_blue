@@ -1,10 +1,27 @@
 nl:
   refinery:
     plugins:
+      branches:
+        title: Branches
       doctors:
         title: Doctors
     doctors:
       admin:
+        branches:
+          actions:
+            create_new: Maak een nieuwe Branch
+            reorder: Wijzig de volgorde van de Branches
+            reorder_done: Klaar met het wijzingen van de volgorde van de Branches
+          records:
+            title: Branches
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Branches. Druk op 'Maak een nieuwe Branch'
+              om de eerste aan te maken.
+          branch:
+            view_live_html: Bekijk deze branch op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze branch
+            delete: Verwijder deze branch voor eeuwig
         doctors:
           actions:
             create_new: Maak een nieuwe Doctor
@@ -13,17 +30,24 @@ nl:
           records:
             title: Doctors
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Doctors. Druk op 'Maak een nieuwe Doctor' om de eerste aan te maken.
+            no_items_yet: Er zijn nog geen Doctors. Druk op 'Maak een nieuwe Doctor'
+              om de eerste aan te maken.
           doctor:
-            view_live_html: Bekijk deze doctor op de website <br/><em>(opent een nieuw venster)</em>
+            view_live_html: Bekijk deze doctor op de website <br/><em>(opent een nieuw
+              venster)</em>
             edit: Bewerk deze doctor
             delete: Verwijder deze doctor voor eeuwig
+      branches:
+        show:
+          other: Andere Branches
       doctors:
         show:
           other: Andere Doctors
   activerecord:
     attributes:
-      'refinery/doctors/doctor':
+      refinery/doctors/branch:
+        name: Name
+      refinery/doctors/doctor:
         prefix: Prefix
         full_name: Full Name
         bio: Bio

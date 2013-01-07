@@ -1,13 +1,24 @@
 <div class="clearfix">
+
 <% content_for :side_body do %>
+<<<<<<< HEAD
     <h2>Especialidades<%#= t('.other') %></h2>
     <ul id="doctors">
       <% @doctors.each do |doctor| %>
+=======
+  <%= raw @page.content_for(:side_body) %>
+
+    <h2><%#= t('.other') %></h2>
+    
+    <!-- <ul id="doctors"> 
+
+      <%# @doctors.each do |doctor| %>
+>>>>>>> scaffold-for-branch
         <li>
-          <%= link_to doctor.branch, refinery.doctors_doctor_path(doctor) %>
+          <%#= link_to doctor.branch, refinery.doctors_doctor_path(doctor) %>
         </li>
-      <% end %>
-    </ul>
+      <%# end %>
+    </ul> -->
 <% end %>
 
 <% content_for :body do %>

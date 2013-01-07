@@ -1,10 +1,26 @@
 fr:
   refinery:
     plugins:
+      branches:
+        title: Branches
       doctors:
         title: Doctors
     doctors:
       admin:
+        branches:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Branch
+            reorder: Réordonner les Branches
+            reorder_done: Fin de réordonnancement des Branches
+          records:
+            title: Branches
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Branch. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Branch" pour créer votre premi(er/ère) branch.
+          branch:
+            view_live_html: Voir ce(t/tte) branch <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) branch
+            delete: Supprimer définitivement ce(t/tte) branch
         doctors:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Doctor
@@ -12,18 +28,24 @@ fr:
             reorder_done: Fin de réordonnancement des Doctors
           records:
             title: Doctors
-            sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Doctor. Cliquer sur "Créer un(e) nouve(au/l/lle) Doctor" pour créer votre premi(er/ère) doctor.'
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Doctor. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Doctor" pour créer votre premi(er/ère) doctor.
           doctor:
             view_live_html: Voir ce(t/tte) doctor <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) doctor
             delete: Supprimer définitivement ce(t/tte) doctor
+      branches:
+        show:
+          other: Autres Branches
       doctors:
         show:
           other: Autres Doctors
   activerecord:
     attributes:
-      'refinery/doctors/doctor':
+      refinery/doctors/branch:
+        name: Name
+      refinery/doctors/doctor:
         prefix: Prefix
         full_name: Full Name
         bio: Bio
