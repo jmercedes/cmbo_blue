@@ -52,6 +52,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    colorbox-rails (0.0.9)
+      jquery-rails
+      rails (>= 3.1.1)
     commonjs (0.2.6)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
@@ -242,6 +245,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-will_paginate
   coffee-rails (~> 3.2.1)
+  colorbox-rails
   fog
   jquery-rails (~> 2.0.0)
   less-rails

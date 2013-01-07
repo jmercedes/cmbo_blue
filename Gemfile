@@ -35,7 +35,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
+gem 'colorbox-rails'
 gem 'jquery-rails', '~> 2.0.0'
 
 gem 'bootstrap-will_paginate'
