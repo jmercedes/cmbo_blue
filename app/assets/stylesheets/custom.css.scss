@@ -24,7 +24,7 @@ strong {
     background:url(logo_cmbo.png) no-repeat;
     height:155px;
     width:239px;
-	margin:0;
+		margin:0;
 }
 
 
@@ -34,6 +34,11 @@ strong {
     height:155px;
     width:239px;
     text-indent:-9999px;
+}
+
+.header_info{
+	float:right;
+	width:400px;
 }
 
 .content .span4 {
