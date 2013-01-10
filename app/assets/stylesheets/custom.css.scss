@@ -117,7 +117,8 @@ ul li a {
 
 #footer {
 	background: #0470b5;
-	padding: 10px 0 0 0;		
+	padding: 10px 0 0 0;
+	margin-top: 20px;		
 }
 
 #footer ul {
@@ -251,8 +252,8 @@ footer ul li strong {
 #separator {
     background:url(separator-large-bg.png) no-repeat;
     height:40px;
-    width:960px;
-	margin:20px 0 0 0;
+    width:94	0px;
+		margin:20px 0 0 0;
 }
 
 /* show.html.erb */
@@ -314,6 +315,11 @@ section#content_right{
 	width:230px;
 	float:right;
 	
+}
+
+.posted_at {
+	margin-bottom:10px;
+
 }
 
 /* Left Column list */

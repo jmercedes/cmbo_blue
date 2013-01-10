@@ -1,6 +1,6 @@
 
 <nav id="recent_news_items">
-  <h2>Blog<%#= t('.Blog') %></h2>
+  <h2><%= t('.Blog') %></h2>
 
     <% @blog_posts.each do |post| %>
       <p><strong><%= link_to post.title, refinery.blog_post_path(post) %></strong></p>
