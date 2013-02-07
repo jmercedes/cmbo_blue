@@ -1,5 +1,5 @@
-<!-- Nivo Slider -->
 
+<!-- Nivo Slider -->
 <div class="theme-default" id="slider">  
     <% @page.images.each do |img| %>
       
@@ -9,7 +9,7 @@
 
 <div class="row">
 
-<div class="span4"><%= raw @page.content_for(:box_one) %></div>
+<div class="span3"><%= raw @page.content_for(:box_one) %></div>
 
 <div class="span4 dotted"><% @items = Refinery::News::Item.latest(2) %>
 <%= render :partial => '/refinery/news/items/recent_posts' %></div>
