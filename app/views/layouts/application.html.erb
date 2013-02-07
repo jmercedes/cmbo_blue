@@ -1,21 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body>
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div class="container">
-      <header id="header">
-        <%= render '/refinery/header' -%>
-      </header>
-      <section id="page">
-        <%= yield %>
-      </section>
+    <header class="navbar navbar-fixed-top">
+
+      <nav class="navbar-inner">
+        <div class="container">
+          <%= render 'refinery/menu' %>
+          <%#= render 'layouts/navigation' %>
+        </div>
+      </nav>
+	        <%#= render '/refinery/header' -%>
+    </header>
+    <div id="main" role="main">
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span12">
+              <%#= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div> <!--! end of .container -->
       <footer>
-        <%= render '/refinery/footer' -%>
+      <%= render '/refinery/footer' -%>
       </footer>
-    </div>
-    <%= render '/refinery/javascripts' %>
+
+    </div> <!--! end of #main -->
   </body>
-</html>
+</html>	
+
+

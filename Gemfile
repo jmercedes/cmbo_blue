@@ -39,6 +39,7 @@ gem 'colorbox-rails'
 gem 'jquery-rails', '~> 2.0.0'
 
 gem 'bootstrap-will_paginate'
+gem 'rails_bootstrap_navbar'
 
 
 # To use ActiveModel has_secure_password

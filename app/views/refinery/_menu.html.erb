@@ -8,10 +8,10 @@
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
 <div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
+  <div>
+    <div>
 
-      <nav id='<%= dom_id %>' class='<%= css %> nav'>
+      <nav id='<%= dom_id %>' class='<% css %> nav'>
         <ul class="nav">
 
 
@@ -29,3 +29,4 @@
     </div>
 </div>
 <% end -%>
+
