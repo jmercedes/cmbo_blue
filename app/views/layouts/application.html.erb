@@ -14,10 +14,13 @@
           <%#= render 'layouts/navigation' %>
         </div>
       </nav>
-	        <%#= render '/refinery/header' -%>
+
     </header>
     <div id="main" role="main">
       <div class="container">
+				<div id="content">
+	        <%= render '/refinery/header' -%>					
+				</div>
         <div class="content">
            <div class="row">
             <div class="span12">
@@ -28,7 +31,12 @@
         </div>
       </div> <!--! end of .container -->
       <footer>
-      <%= render '/refinery/footer' -%>
+			<div class="container">
+			<div class="contentx">
+      <%= render '/refinery/footer' -%>				
+			</div>
+			</div>
+
       </footer>
 
     </div> <!--! end of #main -->

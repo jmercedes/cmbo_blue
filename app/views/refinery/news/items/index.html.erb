@@ -2,7 +2,7 @@
 
 <% content_for :body_content_left do %>
   <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) unless params[:page] %>
-
+  <section class="span9">
   <% if @items.any? %>
     <% @items.each do |item| %>
       <article class="news_item_truncated">
@@ -23,12 +23,15 @@
   <% else %>
     <p><em><%= t('.no_items_yet') %></em></p>
   <% end %>
+</section>
 <% end -%>
 
 <% content_for :body_content_right_prepend do -%>
+<aside class="span2">
   <%= raw @page.content_for(::Refinery::Pages.default_parts.second.to_sym) %>
 <% end if ::Refinery::Pages.default_parts.many? -%>
 <%= render :partial => '/refinery/news/shared/body_content_right' %>
+</aside> 
 
 <%= render :partial => "/refinery/content_page" %>
 </div>

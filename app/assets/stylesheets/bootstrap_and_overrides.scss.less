@@ -1,5 +1,5 @@
 @import "twitter/bootstrap/bootstrap";
-/* @import "twitter/bootstrap/responsive"; */
+@import "twitter/bootstrap/responsive";
 
 /* body { padding-top: 60px; } */
 
@@ -33,18 +33,69 @@
 // Example:
 // @linkColor: #ff0000;
 
-.content {
-  background-color: #eee;
+body {
+    background: radial-gradient(ellipse at center center , #8CD2F4 0%, #E3F4FC 100%) repeat scroll 0 0 transparent;
+    color: #666;
+}
+
+.contentx {
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-  box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
 
+
+.content {
+  background-color: #FFF;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  border: 1px solid #F1F1F1;
+}
+
+/* Refinery Inquiries Engine */
+
+.inquiries {
+  form {
+    padding-top: 12px;
+    label {
+      width: 150px;
+      float: left;
+    }
+    input {
+      width: 300px;
+    }
+    .field {
+      margin: 12px 0px;
+    }
+    .actions {
+      margin-left: 150px;
+      input {
+        width: auto;
+      }
+    }
+  }
+}
+
+input, textarea, .uneditable-input {
+    width: 600px;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius: 4px 4px 4px 4px;
+    color: #555555;
+    display: inline-block;
+    font-size: 18px;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    vertical-align: middle;
+}
 
 
