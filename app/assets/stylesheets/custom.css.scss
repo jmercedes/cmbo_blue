@@ -42,7 +42,12 @@ strong {
 .dotted {
     border-left: 2px dotted #bbd5e5;
 	padding-left: 20px;
+}
+
+.dotted-top {
+    border-left: 2px dotted #bbd5e5;
 }	
+	
 
 /*  News Engine  */
 
@@ -189,7 +194,7 @@ footer ul li strong {
 }
 
 #separator {
-	border-top:2px dotted #bbd5e5;
+	border-top:1px solid #bbd5e5;
     /* background:url(separator-large-bg.png) no-repeat; */ 
     position:absolute;
 	height:40px;
@@ -222,3 +227,4 @@ p img {
 .center{
 	text-align:center;
 }
+
