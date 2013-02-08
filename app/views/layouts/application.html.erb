@@ -17,29 +17,20 @@
 
     </header>
     <div id="main" role="main">
-      <div class="container">
-				<div id="content"> 
-					
-	        <%= render '/refinery/header' -%>					
-
-				</div>
-
-
-              <%= yield %>
-
-
-      </div> <!--! end of .container -->
+	      <div class="container">
+					<div id="content"><%= render '/refinery/header' -%></div>
+	              <%= yield %>
+	      </div> <!--! end of .container -->
       <footer>
-			<div class="container">
-			<div class="contentx">
-      <%= render '/refinery/footer' -%>				
-			</div>
-			</div>
-
+				<div class="container">
+					<div class="contentx">
+		      <%= render '/refinery/footer' -%>				
+					</div>
+				</div>
       </footer>
-
     </div> <!--! end of #main -->
+    <%= render '/refinery/javascripts' %>
   </body>
-</html>	
+</html>
 
 

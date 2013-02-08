@@ -8,7 +8,8 @@
   <![endif]-->
 <% end %>
 <%= javascript_include_tag 'application' %>
-<%= yield :javascripts -%>
+<%= javascript_include_tag 'jquery.nivo.slider.pack' %>
+<%= javascript_include_tag 'jquery.nivo.slider' %>
 
 <script type="text/javascript">
 $(window).load(function() {
@@ -21,3 +22,5 @@ $(window).load(function() {
     });
 });
 </script>
+
+<%= yield :javascripts -%>

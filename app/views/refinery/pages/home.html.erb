@@ -1,41 +1,33 @@
 <!-- Nivo Slider -->
-<div class="contentx">
 	<div class="slider-wrapper theme-default">
-		<div class="nivoSlider" id="slider">
+	    <div id="slider" class="nivoSlider">
 		    <% @page.images.each_with_index do |img, index| %>      
-		        <%= image_tag img.url, :title => '#htmlcaption' %>
-					  <div id="htmlcaption" class='nivo-html-caption'>
-								<%=raw @page.caption_for_image_index(index) %>
-						</div>  
-		    <% end %>
-		</div>
+		        <%= image_tag img.url, :title => '#htmlcaption' %> 
+		  </div>
 	</div>
-</div>
+		<div id="htmlcaption" class="nivo-html-caption">
+		<%=raw @page.caption_for_image_index(index) %>
+	  </div>  
+        <% end %>
 
 <div class="content">
    <div class="row">
     <div class="span12">
-
-
 			<div class="row">
+				<div class="span3"><%= raw @page.content_for(:box_one) %></div>
 
-			<div class="span3"><%= raw @page.content_for(:box_one) %></div>
+				<div class="span3 dotted"><% @items = Refinery::News::Item.latest(2) %>
+				<%= render :partial => '/refinery/news/items/recent_posts' %></div>
 
-			<div class="span3 dotted"><% @items = Refinery::News::Item.latest(2) %>
-			<%= render :partial => '/refinery/news/items/recent_posts' %></div>
+				<div class="span3 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(2) %>
+				<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %></div>
+				</div>
 
-			<div class="span3 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(2) %>
-			<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %></div>
-			</div>
-
-			<div id="separator"></div>
-			<div class="row">
-			  <div class="span8"><%= raw @page.content_for(:box_two) %></div>
-			  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
-			</div>
-
-
-
+				<div id="separator"></div>
+				<div class="row">
+				  <div class="span8"><%= raw @page.content_for(:box_two) %></div>
+				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
+				</div>
     </div>
   </div>
 </div>
