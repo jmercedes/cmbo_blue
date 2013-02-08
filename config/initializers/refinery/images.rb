@@ -41,5 +41,8 @@ Refinery::Images.configure do |config|
   # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
   # config.datastore_root_path = "/Users/evanx/work/cmbo_blue/public/system/refinery/images"
   # config.trust_file_extensions = false
+  
+  #Enable image caption
+  Refinery::PageImages.captions = true
 
 end
