@@ -1,11 +1,9 @@
 h1, h4, h5, h6{
-	
 	font-size:24px;
 	color: #51A351;
 }
 
 h2, h3{
-	
 	font-size:20px;
 	color: #51A351;
 }
@@ -60,9 +58,7 @@ ul {
 }
 
 ul li a {
-	text-decoration: none;
-	
-	
+	text-decoration: none;   
 }
 
 #footer {
@@ -193,10 +189,13 @@ footer ul li strong {
 }
 
 #separator {
-    background:url(separator-large-bg.png) no-repeat;
-    height:40px;
-    width:940px;
-	margin:20px 0 0 0;
+	border-top:2px dotted #bbd5e5;
+    /* background:url(separator-large-bg.png) no-repeat; */ 
+    position:absolute;
+	height:40px;
+    width:97%;
+	margin: 20px 0 20px 0;
+	display:block;
 }
 
 /* show.html.erb */
@@ -218,4 +217,8 @@ p img {
 .posted_at {
 	margin-bottom:10px;
 
+}
+
+.center{
+	text-align:center;
 }
