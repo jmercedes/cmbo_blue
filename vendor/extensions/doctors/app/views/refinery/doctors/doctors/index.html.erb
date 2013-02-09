@@ -1,10 +1,12 @@
-<div class="clearfix">
+<div class="row-fluid">
 
 <% content_for :side_body do %>
-  
-  <%= raw @page.content_for(:side_body) %>
-  
+
+  	<%= raw @page.content_for(:side_body) %>
+
 <% end %>
+
+
 
 <% content_for :body do %>
     <% @doctors.each do |doctor| %>
@@ -20,8 +22,9 @@
         
     <% end %>
     <%= will_paginate @doctors %>
-<% end %>
 
+<% end %>
+</div>
 
 
 <%= render '/refinery/content_page' %>
