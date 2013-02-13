@@ -1,17 +1,22 @@
-
-<% content_for :content_right do %>
-	<%= raw @page.content_for(:content_right) %>
+<div class="clearfix">
+<div class="row-fluid">
+	
+	
+<div id="span3">	
+<% content_for :side_body do %>
+		<%= raw @page.content_for(:side_body) %>		
 <% end %>
+</div>
 
-<% content_for :body_content_left do %>
-  
+<% content_for :body do %>
+		  
     <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
       <%= render :partial => "/refinery/admin/error_messages",
                  :locals => {
                  :object => @inquiry,
                  :include_object_name => true
                  } %>
-		<div class='span8'>
+
       <div class="field">
         <%= f.text_field :name, :class => 'text', :required => 'required', :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') %>
       </div>
@@ -28,8 +33,11 @@
         <%= f.submit t('.send'), :class => "btn btn-primary" %>
         <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
       </div>
-  </div>
+
     <% end %>
 
 <% end %>
+
 <%= render :partial => "/refinery/content_page" %>
+</div>
+</div>

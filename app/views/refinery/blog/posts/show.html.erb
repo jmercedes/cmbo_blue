@@ -1,17 +1,21 @@
 <div class="clearfix">
+<div class="row-fluid">
+	
 <% content_for :body_content_left do %>
-  <div id="show_blog_post">
+  <div class="span9 inner_content dotted_right">
     <%= render 'post' %>
-  </div>
 
   <% if Refinery::Blog::Post.comments_allowed? %>
     <%= render 'comments'%>
   <% end %>
 <% end %>
 
+
 <%= render :partial => '/refinery/blog/shared/body_content_right' %>
 
 <%= render :partial => "/refinery/content_page", :locals => { :remove_automatic_sections => true }  %>
+
+</div>
 
 <% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
 <% content_for :javascripts do %>
@@ -20,4 +24,5 @@
   <script src="http://w.sharethis.com/button/buttons.js"></script>
   <script>stLight.options({publisher:'<%= Blog::Post::ShareThis.key %>'});</script>
 <% end if Refinery::Blog::Post::ShareThis.enabled? %>
+</div>
 </div>

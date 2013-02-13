@@ -1,31 +1,32 @@
-<div class="row-fluid">
+<div class="clearfix">
 
-<% content_for :side_body do %>
-
-  	<%= raw @page.content_for(:side_body) %>
-
-<% end %>
+	<div class="row-fluid">
 
 
+		<% content_for :side_body do %>
 
-<% content_for :body do %>
-    <% @doctors.each do |doctor| %>
-      
-      <p><strong><%=  doctor.prefix + ' ' + doctor.full_name %></strong><br>
-      <%=  doctor.specialty %></p>
-      <p><strong>Horario: </strong><%=  doctor.schedule %><br>
-      <strong>Consultorio: </strong><%=  doctor.location %></p>
-      <%=  link_to "Biografía", refinery.doctors_doctor_path(doctor), class: "btn btn-primary" %>
-      <hr>
+		<%= raw @page.content_for(:side_body) %>
 
-        <%#= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
-        
-    <% end %>
-    <%= will_paginate @doctors %>
-
-<% end %>
-</div>
+		<% end %>
 
 
-<%= render '/refinery/content_page' %>
+	<% content_for :body do %>
+	<% @doctors.each do |doctor| %>
+
+	<p><strong><%=  doctor.prefix + ' ' + doctor.full_name %></strong><br>
+		<%=  doctor.specialty %></p>
+		<p><strong>Horario: </strong><%=  doctor.schedule %><br>
+			<strong>Consultorio: </strong><%=  doctor.location %></p>
+			<%=  link_to "Biografía", refinery.doctors_doctor_path(doctor), class: "btn btn-primary" %>
+			<hr>
+
+			<%#= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
+
+			<% end %>
+			<%= will_paginate @doctors %>
+
+			<% end %>
+
+	<%= render '/refinery/content_page' %>
+ </div>
 </div>
