@@ -41,7 +41,6 @@ gem 'jquery-rails', '~> 2.0.0'
 gem 'bootstrap-will_paginate'
 gem 'rails_bootstrap_navbar'
 
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -67,6 +66,7 @@ gem "refinerycms-news", '~> 2.0.0'
 gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
+
 
 
 
