@@ -10,12 +10,17 @@ es:
           item:
             view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
             edit: "Editar esta noticia"
-            delete: "Borrar completament esta noticia"
+            delete: "Borrar esta noticia"
             published: Publicada
           index:
             create: "Crear noticia"
             item: Noticia
             no_items_yet: 'Aún no hay noticias. Haz click en "Crear noticia" para añadir la primera.'
+      shared:
+        items:
+          read_more: Read more
+          created_at: 'Created at %{when}'
+        archives: Archivo
       items:
         show:
           back_to_index: "Volver al listado de noticias"
@@ -24,7 +29,7 @@ es:
           recent_posts: Posts recientes
         index:
           published: Publicada
-          read_more: Leer mas
+          read_more: Leer más
           no_items_yet: Aún no hay ninguna noticia.
   activerecord:
     attributes:
