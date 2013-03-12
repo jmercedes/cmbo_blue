@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106231056) do
+ActiveRecord::Schema.define(:version => 20130312212352) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -65,18 +65,8 @@ ActiveRecord::Schema.define(:version => 20130106231056) do
   add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
 
-  create_table "refinery_doctors", :force => true do |t|
-    t.string   "prefix"
-    t.string   "full_name"
-    t.text     "bio"
-    t.string   "specialty"
-    t.string   "branch"
-    t.string   "schedule"
-    t.string   "location"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+# Could not dump table "refinery_doctors" because of following StandardError
+#   Unknown type 'image' for column 'dr_photo'
 
   create_table "refinery_doctors_branches", :force => true do |t|
     t.string   "name"
