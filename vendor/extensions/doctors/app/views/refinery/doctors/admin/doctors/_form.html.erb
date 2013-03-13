@@ -3,6 +3,12 @@
               :object => @doctor,
               :include_object_name => true %>
 
+
+ <div class='field'>
+   <%= f.label :dr_img -%>
+   <%= f.file_field :dr_img, :class => 'larger widest'  -%>
+ </div>
+
   
   <div class='field'>
     <%= f.label :prefix -%>
@@ -17,6 +23,8 @@
     <%= f.text_field :full_name, :class => 'larger widest'  -%>
 
   </div>
+
+
   
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
