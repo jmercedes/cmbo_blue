@@ -17,27 +17,29 @@
   </aside>
 <% end %>
 
-</div>
+</div>   
+
 
 <div class="clearfix">
 <% content_for :body do %>
   <section>
-    <p>
+		<div class="span3">
+				<p><%= image_fu @doctor.dr_img, '250x250'%></p>
+		</div>
+    
+		<div class="span4">
       <h1><%= @doctor.prefix + ' ' + @doctor.full_name %></h1>
       <h2><%= @doctor.specialty %></h2>
-    </p>
-  </section>
-    <section>
-    <h1>Biografía</h1>
-    <p>
-      <%=raw @doctor.bio %>
-    </p>
-  </section>
-  <section>
-    <strong>Horario: </strong><%=raw @doctor.schedule %>
-  </section>
-  <section>
-    <strong>Consultorio: </strong><%=raw @doctor.location %>
+	    <strong>Horario: </strong><%=raw @doctor.schedule %><br>
+	    <strong>Consultorio: </strong><%=raw @doctor.location %>
+	    <h3>Biografía:</h3>
+	    <p>
+	      <%=raw @doctor.bio %>
+	    </p>
+	
+			
+		</div>
+
   </section>
 <% end %>
 

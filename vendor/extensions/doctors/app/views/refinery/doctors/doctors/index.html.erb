@@ -4,22 +4,28 @@
 
 
 		<% content_for :side_body do %>
-
-		<%= raw @page.content_for(:side_body) %>
-
+			<%= raw @page.content_for(:side_body) %>
 		<% end %>
-
-
+		
 	<% content_for :body do %>
-	<% @doctors.each do |doctor| %>
+		<% @doctors.each do |doctor| %>
+	
+			<div class="span3">
+				<p><%= image_fu doctor.dr_img, '120x120'%></p> 
+			</div>
 
-	<p><strong><%=  doctor.prefix + ' ' + doctor.full_name %></strong><br>
-		<%=  doctor.specialty %></p>
-		<p><strong>Horario: </strong><%=  doctor.schedule %><br>
-			<strong>Consultorio: </strong><%=  doctor.location %></p>
-			<%=  link_to "Biografía", refinery.doctors_doctor_path(doctor), class: "btn btn-primary" %>
+			<div class="span8">
+				<p><strong><%=  doctor.prefix + ' ' + doctor.full_name %></strong>
+				<br>
+				           <%=  doctor.specialty %>
+				</p>
+				<p><strong>Horario: </strong><%=  doctor.schedule %> | <strong>Consultorio: </strong><%=  doctor.location %><br><br>	
+			  <%= link_to "Biografía", refinery.doctors_doctor_path(doctor), class: "btn btn-mini btn-primary" %></p>
+			</div> 		
+			<div class="clearfix"></div>
+			
 			<hr>
-
+	
 			<%#= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
 
 			<% end %>
