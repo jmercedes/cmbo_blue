@@ -1,3 +1,19 @@
+<!-- Nivo Slider -->
+	<div class="slider-wrapper theme-default">
+	    <div id="slider" class="nivoSlider">
+		    <% @page.images.each_with_index do |img, index| %>      
+		        <%= image_tag img.url, :title => '#htmlcaption' %>
+						<div id="htmlcaption" class="nivo-html-caption">
+						<%=raw @page.caption_for_image_index(index) %>
+						</div>
+        <% end %>  
+			</div>
+	</div>  
+
+
+ 	<div class="content">
+			
+
    <div class="row">
     <div class="span12">
 			<div class="row-fluid">
@@ -16,6 +32,8 @@
 				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 				</div>
   </div>
+</div>
+
 </div>
 
 
