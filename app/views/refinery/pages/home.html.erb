@@ -17,6 +17,7 @@
    <div class="row">
     <div class="span12">
 			<div class="row-fluid">
+				
 				<div class="span4"><%= raw @page.content_for(:box_one) %></div>
 
 				<div class="span4 dotted"><% @items = Refinery::News::Item.latest(2) %>

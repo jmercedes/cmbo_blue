@@ -21,6 +21,7 @@ end
 
 gem 'libv8', '~> 3.11.8'
 gem "psych", "~> 1.3.4"
+gem "sunspot_rails"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
