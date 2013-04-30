@@ -122,14 +122,11 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
-<<<<<<< HEAD
     pr_geohash (1.0.0)
-=======
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
->>>>>>> 063446ec1b0ff6df6dab96ffa34e39f1619c14f2
     psych (1.3.4)
     rack (1.4.1)
     rack-cache (1.2)
@@ -160,7 +157,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
-    ref (1.0.4)
     refinerycms (2.0.9)
       bundler (~> 1.0)
       refinerycms-authentication (= 2.0.9)
@@ -243,7 +239,6 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
-<<<<<<< HEAD
     sunspot (2.0.0)
       pr_geohash (~> 1.0)
       rsolr (~> 1.0.7)
@@ -251,11 +246,6 @@ GEM
       nokogiri
       sunspot (= 2.0.0)
     therubyracer (0.11.0)
-=======
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
->>>>>>> 063446ec1b0ff6df6dab96ffa34e39f1619c14f2
-      ref
     thor (0.16.0)
     tilt (1.3.3)
     treetop (1.4.12)
