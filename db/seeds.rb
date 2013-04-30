@@ -20,3 +20,6 @@ Refinery::Inquiries::Engine.load_seed
 
 # Added by Refinery CMS Doctors extension
 Refinery::Doctors::Engine.load_seed
+
+# Added by Refinery CMS Search engine
+Refinery::Search::Engine.load_seed
