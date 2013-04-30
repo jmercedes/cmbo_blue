@@ -18,17 +18,19 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
+gem 'libv8', :platforms => :ruby
+gem 'therubyracer', :require => 'v8', :platforms => :ruby
 
-gem 'libv8', '~> 3.11.8'
+#gem 'libv8', '~> 3.11.8'
 gem "psych", "~> 1.3.4"
 gem "sunspot_rails"
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
-  gem 'therubyracer', :require => 'v8'
+  #gem 'therubyracer', :require => 'v8'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -68,7 +70,7 @@ gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 
-
-
-
+gem 'meta_search'
 gem 'refinerycms-doctors', :path => 'vendor/extensions'
+gem 'refinerycms-search', '~> 2.0.0'
+gem 'pry'

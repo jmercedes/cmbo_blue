@@ -8,6 +8,7 @@ require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -38,7 +39,7 @@ module CmboBlue
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    
+
     config.assets.initialize_on_precompile = true
 
     # Configure the default encoding used in templates for Ruby 1.9.
@@ -66,5 +67,10 @@ module CmboBlue
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.to_prepare do
+      Refinery.searchable_models = [Refinery::Doctors::Doctor]
+    end
+
   end
 end
