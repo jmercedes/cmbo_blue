@@ -21,7 +21,7 @@ end
 gem 'libv8', :platforms => :ruby
 gem 'therubyracer', :require => 'v8', :platforms => :ruby
 
-#gem 'libv8', '~> 3.11.8'
+#gem 'libv8'
 gem "psych", "~> 1.3.4"
 gem "sunspot_rails"
 
@@ -30,7 +30,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
-  #gem 'therubyracer', :require => 'v8'
+  #gem 'therubyracer'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
