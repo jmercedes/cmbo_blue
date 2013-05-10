@@ -37,7 +37,7 @@ module Refinery
       end
       
       def glossary
-        @glosssary = Doctor.find_all.where("name like '#{letter}%')
+        #@glosssary = Doctor.find_all.where("name like '#{letter}%')
       end
 
     end

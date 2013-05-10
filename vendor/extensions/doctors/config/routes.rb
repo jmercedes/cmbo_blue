@@ -22,11 +22,6 @@ Refinery::Core::Engine.routes.append do
     resources :doctors, :path => '', :only => [:index, :show]
   end
 
-  resources :doctors do
-    collection do
-      get 'glossary'
-    end
-  end
 
 
   # Admin routes
