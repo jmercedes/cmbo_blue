@@ -5,7 +5,7 @@
     <h2>Otros Especialistas<%#= t('.other') %></h2>
   
       <% @doctors.each do |doctor| %>
-        <% if @doctor.branch == doctor.branch && @doctor.full_name != doctor.full_name %>
+        <% if doctor.branch == doctor.branch && doctor.full_name != doctor.full_name %>
           <ul id="doctors">
             <li>
               <%= link_to doctor.prefix + ' ' + doctor.full_name, refinery.doctors_doctor_path(doctor) %>
