@@ -1,4 +1,3 @@
-
 module DoctorsHelper
   def doctor_index
     ('A'..'Z').map do |letter| # letters must be a string for range to work

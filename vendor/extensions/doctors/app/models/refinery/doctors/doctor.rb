@@ -12,21 +12,6 @@ module Refinery
       belongs_to :dr_img, :class_name => '::Refinery::Image'
       has_many :branches
             
-
-
-      #def self.glossary
-      #  (a..z).each do |f|
-      #    link_to "#{f}", doctor_path(:id => f)
-      #end
-
-
-      
-      #def glossary
-      #  ('a'..'z').to_a.each do |f|
-      #    link_to "#{f}", doctor_path(:id => f)
-      #  end
-      #end
-      
     end
   end
 end

@@ -4,6 +4,7 @@ module Refinery
 
       before_filter :find_all_doctors
       before_filter :find_page
+      before_filter :find_all_doctors_by_letter
 
       def index
         #@doctor = Doctor.find(params[:id])
@@ -24,9 +25,14 @@ module Refinery
     protected
 
       def find_all_doctors
-        @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)
-        
+        @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)        
       end
+
+      def find_all_doctors_by_letter
+        @Doctors = Doctor.all(:conditions => "name like '#{params[:letter]}%'")
+        #@doctors = Doctor.order('ASC').paginate(:page => params[:page], :per_page => 20)        
+      end
+
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/doctors").first
@@ -37,7 +43,7 @@ module Refinery
       end
       
       def glossary
-        #@glosssary = Doctor.find_all.where("name like '#{letter}%')
+        @glosssary = Doctor.find_all.where("name like '#{letter}%'")
       end
 
     end

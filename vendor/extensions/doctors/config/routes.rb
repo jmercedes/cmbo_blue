@@ -20,8 +20,8 @@ Refinery::Core::Engine.routes.append do
   # Frontend routes
   namespace :doctors do
     resources :doctors, :path => '', :only => [:index, :show]
+    #match '/doctors/glossary/:id' => 'doctors#glossary'
   end
-
 
 
   # Admin routes
