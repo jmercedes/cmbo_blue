@@ -25,11 +25,17 @@ module Refinery
     protected
 
       def find_all_doctors
-        @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)        
+        if params[:letter]
+          @doctors = Doctor.where("full_name like '#{params[:letter]}%'")
+          @doctors = @doctors.paginate(:page => params[:page], :per_page => 20)          
+        else
+          @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)
+        end
+        #@doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 10)        
       end
 
       def find_all_doctors_by_letter
-        @Doctors = Doctor.all(:conditions => "name like '#{params[:letter]}%'")
+        @Doctors = Doctor.all(:conditions => "full_name like 'A%'")
         #@doctors = Doctor.order('ASC').paginate(:page => params[:page], :per_page => 20)        
       end
 
