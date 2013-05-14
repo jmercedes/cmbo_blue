@@ -3,7 +3,7 @@
 
     <% @items.each do |item| %>
       <p><strong><%= link_to item.title, refinery.news_item_path(item) %></strong></p>        
-        <p><%= truncate  item.body, length: 150,
+        <p><%= truncate  item.body, length: 100,
                        omission: "...", preserve_html_tags: true %>
                        
         </p>               

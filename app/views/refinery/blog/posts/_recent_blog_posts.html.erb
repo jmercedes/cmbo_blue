@@ -4,7 +4,7 @@
 
     <% @blog_posts.each do |post| %>
       <p><strong><%= link_to post.title, refinery.blog_post_path(post) %></strong></p>
-        <p><%= truncate  post.body, :length => 150,
+        <p><%= truncate  post.body, :length => 100,
                        :omission => " ...", :preserve_html_tags => true %>
 
       <hr>
