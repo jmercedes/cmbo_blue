@@ -22,8 +22,18 @@ module Refinery
         present(@page)
       end
 
-    protected
+      def find_all_doctors_by_speciality
+        if !params[:find_speciality_doctors].blank?
+          @selected_speciality_doctors = params[:find_speciality_doctors]
+          @doctors = Doctor.where(:specialty => "#{params[:find_speciality_doctors]}")
+          @doctors = @doctors.paginate(:page => params[:page], :per_page => 20)
+        else
+          @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)
+        end
+        render "index"
+      end
 
+      protected
       def find_all_doctors
         if params[:letter]
           @doctors = Doctor.where("full_name like '#{params[:letter]}%'")
@@ -31,14 +41,20 @@ module Refinery
         else
           @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)
         end
-        #@doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 10)        
+
+        @doctor_speciality = []
+        @doctors.each do |doctor|
+          @doctor_speciality << doctor.specialty
+        end
+        @all_doctor_speciality = @doctor_speciality.uniq
+
+        #@doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 10)
       end
 
       def find_all_doctors_by_letter
         @Doctors = Doctor.all(:conditions => "full_name like 'A%'")
         #@doctors = Doctor.order('ASC').paginate(:page => params[:page], :per_page => 20)        
       end
-
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/doctors").first

@@ -9,13 +9,20 @@
     <% end %>
 
     <% content_for :body do %>
+
       <%= form_tag refinery.search_path do -%>
         <%= text_field_tag :query, {}, {:type => "search",
                                         :placeholder => "Search  for...",
                                         :value => (params[:query] if params[:query])} %>
         <%= submit_tag 'Go' %>
       <% end %>
-      
+
+      <!--Searching by speciality-->
+      <%= form_tag refinery.find_all_doctors_by_speciality_path do %>
+        <%= select_tag "find_speciality_doctors", options_for_select(@all_doctor_speciality,@selected_speciality_doctors), :prompt => "Select Speciality..", :id => "" %>
+        <%= submit_tag "Search" %>
+      <% end %>
+
        <%= doctor_index %>
 			 <hr>
 
