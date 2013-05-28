@@ -12,7 +12,7 @@
 
       <%= form_tag refinery.search_path do -%>
         <%= text_field_tag :query, {}, {:type => "search",
-                                        :placeholder => "Search  for...",
+                                        :placeholder => "Buscar",
                                         :value => (params[:query] if params[:query])} %>
         <%= submit_tag 'Go' %>
       <% end %>
