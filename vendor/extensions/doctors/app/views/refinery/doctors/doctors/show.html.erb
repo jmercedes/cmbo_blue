@@ -34,10 +34,9 @@
 		<div class="span4">
       <h1><%= @doctor.prefix + ' ' + @doctor.full_name %></h1>
       <h2><%= @doctor.specialty %></h2>
-	    <strong>Horario: </strong><br><%=raw @doctor.schedule %><br>
-	    <strong>Consultorio:</strong><br><%=raw @doctor.location %>
-	    <strong>Biografía:</strong><br>
-	      <%=raw @doctor.bio %>
+	    <p><strong>Horario: </strong><br><%=raw @doctor.schedule %><br></p>
+	    <p><strong>Consultorio:</strong><br><%=raw @doctor.location %></p>
+	    <p><strong>Biografía:</strong><br><%=raw @doctor.bio %></p>
 	
 			
 		</div>
