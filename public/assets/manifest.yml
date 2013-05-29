@@ -61,8 +61,8 @@ slide-saperator.png: slide-saperator-3fd574c62124106d1305c6896c15f6f3.png
 slide-saperator/index.png: slide-saperator-3fd574c62124106d1305c6896c15f6f3.png
 application.js: application-a31d36b1e7841e16ebc9955b9bc51e1a.js
 application/index.js: application-a31d36b1e7841e16ebc9955b9bc51e1a.js
-application.css: application-f1d90a6b22bc4e12be12df4816a5cbb8.css
-application/index.css: application-f1d90a6b22bc4e12be12df4816a5cbb8.css
+application.css: application-4f012f916eac881c76669f75c56e4959.css
+application/index.css: application-4f012f916eac881c76669f75c56e4959.css
 refinery/page-image-picker.js: refinery/page-image-picker-e77aef813b8738e85acb4cb368580d2a.js
 refinery/page-image-picker/index.js: refinery/page-image-picker-e77aef813b8738e85acb4cb368580d2a.js
 refinery/page-image-picker.css: refinery/page-image-picker-72dd361665b62847627db2e981397518.css
