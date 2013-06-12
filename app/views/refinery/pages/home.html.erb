@@ -38,12 +38,16 @@
 	        <% @doctor_branch << doctor.branch %>
 	        <% end %>
 	        <% @all_doctor_branch = @doctor_branch.uniq %>
-					<ul>
-
-	        <% @all_doctor_branch.in_groups_of(3) do |branch| %>
-						<li><%= link_to branch, '/doctors' %></li>
+					
+					<table>
+	        <% @all_doctor_branch.in_groups_of(2) do |branch| %>
+							<tr>
+								<% branch.each do |list| %>
+								<td><%=h link_to branch, '/doctors' %></td>
+								<% end %>
+							</tr>
 				  <% end %>
-					<ul>					
+					</table>					
 				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 				</div>
   </div>
