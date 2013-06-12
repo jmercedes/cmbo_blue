@@ -30,7 +30,7 @@
 
 				<div class="row-fluid dotted-top">
 				  <div class="span8">
-					<h1>...</h1>
+					<h1>Especialistas</h1>
 					<% @all_doctors = Refinery::Doctors::Doctor.all %>
 					
 					<% @doctor_branch = [] %>
@@ -40,13 +40,10 @@
 	        <% @all_doctor_branch = @doctor_branch.uniq %>
 					<ul>
 
-	        <% @all_doctor_branch.each do |branch| %>
+	        <% @all_doctor_branch.in_groups_of(3) do |branch| %>
 						<li><%= link_to branch, '/doctors' %></li>
 				  <% end %>
-					<ul>
-					
-					<hr>
-					<%= raw @page.content_for(:box_two) %></div>
+					<ul>					
 				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 				</div>
   </div>
