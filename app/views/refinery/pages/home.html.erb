@@ -42,9 +42,7 @@
 					<table>
 	        <% @all_doctor_branch.in_groups_of(2) do |branch| %>
 							<tr>
-								<% branch.each do |list| %>
 								<td><%=h link_to branch, '/doctors' %></td>
-								<% end %>
 							</tr>
 				  <% end %>
 					</table>					
