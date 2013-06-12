@@ -40,7 +40,7 @@
 	        <% @all_doctor_branch = @doctor_branch.uniq %>
 					
 					<table>
-	        <% @all_doctor_branch.in_groups_of(2) do |branch| %>
+	        <% @all_doctor_branch.each do |branch| %>
 							<tr>
 								<td><%=h link_to branch, '/doctors' %></td>
 							</tr>
