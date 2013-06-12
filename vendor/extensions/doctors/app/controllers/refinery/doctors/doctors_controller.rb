@@ -3,6 +3,7 @@ module Refinery
     class DoctorsController < ::ApplicationController
 
       before_filter :find_all_doctors
+      before_filter :find_all_doctors_by_b
       before_filter :find_page
       before_filter :find_all_doctors_by_letter
 
@@ -32,6 +33,21 @@ module Refinery
 
         render "index"
       end
+      
+      #find_all_doctors_by_branch
+      def find_all_doctors_by_speciality
+        if !params[:find_branch_doctors].blank?
+          @selected_branch_doctors = params[:find_branch_doctors]
+          @doctors = Doctor.where(:branch => "#{params[:find_branch_doctors]}")
+          @doctors = @doctors.paginate(:page => params[:page], :per_page => 40)
+        else
+          @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 40)
+        end
+
+        render "index"
+      end
+
+
 
       protected
       def find_all_doctors
@@ -51,6 +67,26 @@ module Refinery
 
         #@doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 10)
       end
+
+      def find_all_doctors_by_b
+        if params[:letter]
+          @doctors = Doctor.where("full_name like '#{params[:letter]}%'")
+          @doctors = @doctors.paginate(:page => params[:page], :per_page => 20)
+        else
+          @doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 20)
+        end
+
+        @all_doctors = Doctor.all
+        @doctor_branch = []
+        @all_doctors.each do |doctor|
+          @doctor_branch << doctor.branch
+        end
+        @all_doctor_branch = @doctor_branch.uniq
+
+        #@doctors = Doctor.order('branch ASC').paginate(:page => params[:page], :per_page => 10)
+      end
+
+
 
       def find_all_doctors_by_letter
         @Doctors = Doctor.all(:conditions => "full_name like 'A%'")

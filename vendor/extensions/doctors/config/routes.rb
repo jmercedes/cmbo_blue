@@ -36,4 +36,7 @@ Refinery::Core::Engine.routes.append do
   end
 
   match "/doctors" => "doctors/doctors#find_all_doctors_by_speciality" , :as => :find_all_doctors_by_speciality
+  
+  #match doctors by branch
+  match "/doctors" => "doctors/doctors#find_all_doctors_by_branch" , :as => :find_all_doctors_by_branch
 end
