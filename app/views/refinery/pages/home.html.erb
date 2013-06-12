@@ -39,13 +39,12 @@
 	        <% end %>
 	        <% @all_doctor_branch = @doctor_branch.uniq %>
 					
-					<table>
 	        <% @all_doctor_branch.each do |branch| %>
-							<tr>
-								<td><%=h link_to branch, '/doctors' %></td>
-							</tr>
+							<ul>
+								<li><%=h link_to branch, '/doctors' %></li>
+							</ul>
 				  <% end %>
-					</table>					
+
 				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 				</div>
   </div>
