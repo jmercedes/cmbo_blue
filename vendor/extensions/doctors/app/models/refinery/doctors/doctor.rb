@@ -11,6 +11,16 @@ module Refinery
       validates :prefix, :presence => true
       belongs_to :dr_img, :class_name => '::Refinery::Image'
       has_many :branches
+      
+      
+      def all_branches_home
+        @all_doctors = Doctor.all
+        @doctor_branch = []
+        @all_doctors.each do |doctor|
+        @doctor_branch << doctor.branch
+        end
+        @all_doctor_branch = @doctor_branch.uniq
+      end
             
     end
   end

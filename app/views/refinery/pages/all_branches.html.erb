@@ -1,0 +1,5 @@
+<% @branches.each do |branch| %>
+  <li>
+    <%= link_to branch.name, refinery.doctors_branch_path(branch) %>
+  </li>
+<% end %>
