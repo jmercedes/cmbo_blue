@@ -1,14 +1,7 @@
-<!-- Nivo Slider -->
-	<div class="slider-wrapper theme-default">
-	    <div id="slider" class="nivoSlider">
 		    <% @page.images.each_with_index do |img, index| %>      
 		        <%= image_tag img.url, :title => '#htmlcaption' %>
-						<div id="htmlcaption" class="nivo-html-caption">
 						<%=raw @page.caption_for_image_index(index) %>
-						</div>
         <% end %>  
-			</div>
-	</div>  
 
 
  	<div class="content">
@@ -51,6 +44,4 @@
 </div>
 
 </div>
-
-
 

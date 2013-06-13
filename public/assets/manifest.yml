@@ -59,10 +59,8 @@ separator-large-bg.png: separator-large-bg-bcda2ef5fa44fcc701a3b5e48a34f169.png
 separator-large-bg/index.png: separator-large-bg-bcda2ef5fa44fcc701a3b5e48a34f169.png
 slide-saperator.png: slide-saperator-3fd574c62124106d1305c6896c15f6f3.png
 slide-saperator/index.png: slide-saperator-3fd574c62124106d1305c6896c15f6f3.png
-application.js: application-a31d36b1e7841e16ebc9955b9bc51e1a.js
-application/index.js: application-a31d36b1e7841e16ebc9955b9bc51e1a.js
-application.css: application-0b1642cf4724a76d90f54ec12dc9e03c.css
-application/index.css: application-0b1642cf4724a76d90f54ec12dc9e03c.css
+application.css: application-a71fb595a601ecca7da77ab87e695bfc.css
+application/index.css: application-a71fb595a601ecca7da77ab87e695bfc.css
 refinery/page-image-picker.js: refinery/page-image-picker-e77aef813b8738e85acb4cb368580d2a.js
 refinery/page-image-picker/index.js: refinery/page-image-picker-e77aef813b8738e85acb4cb368580d2a.js
 refinery/page-image-picker.css: refinery/page-image-picker-72dd361665b62847627db2e981397518.css
@@ -931,6 +929,8 @@ wymeditor/skins/wymeditor_icon.png: wymeditor/skins/wymeditor_icon-6873efc118c50
 wymeditor/skins/wymeditor_icon/index.png: wymeditor/skins/wymeditor_icon-6873efc118c50e9726ab0b089740b0af.png
 admin.js: admin-03cfe41d0dc7014d2043d36c05d3816a.js
 admin/index.js: admin-03cfe41d0dc7014d2043d36c05d3816a.js
+application.js: application-73a5c0889a6d1a40075ff9c4d0d80b76.js
+application/index.js: application-73a5c0889a6d1a40075ff9c4d0d80b76.js
 dd_belatedpng.js: dd_belatedpng-79ea5b16160a7f4ea3e45ee41b7109c1.js
 dd_belatedpng/index.js: dd_belatedpng-79ea5b16160a7f4ea3e45ee41b7109c1.js
 jquery/GPL-LICENSE.txt: jquery/GPL-LICENSE-1fa0858d14c353db8e9a7b0ee25db27f.txt
