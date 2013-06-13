@@ -56,7 +56,6 @@ GEM
     colorbox-rails (0.0.14)
       jquery-rails
       rails (>= 3.1.1)
-    commonjs (0.2.6)
     devise (2.0.5)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -93,11 +92,6 @@ GEM
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
     json (1.8.0)
-    less (2.3.2)
-      commonjs (~> 0.2.6)
-    less-rails (2.3.3)
-      actionpack (>= 3.1)
-      less (~> 2.3.1)
     libv8 (3.16.14.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -159,7 +153,6 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    ref (1.0.5)
     refinerycms (2.0.10)
       bundler (~> 1.0)
       refinerycms-authentication (= 2.0.10)
@@ -248,8 +241,6 @@ GEM
     sunspot_rails (2.0.0)
       nokogiri
       sunspot (= 2.0.0)
-    therubyracer (0.11.0)
-      ref
     thor (0.18.1)
     tilt (1.4.1)
     treetop (1.4.14)
@@ -278,7 +269,6 @@ DEPENDENCIES
   colorbox-rails
   fog
   jquery-rails (~> 2.0.0)
-  less-rails
   libv8
   meta_search
   pg
@@ -297,6 +287,5 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   sunspot_rails
-  therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

@@ -1,39 +1,6 @@
-<%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-
-  <body>
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <header class="navbar navbar-fixed-top">
-
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'refinery/menu' %>
-          <%#= render 'layouts/navigation' %>
-        </div>
-      </nav>
-
-    </header>
-    <div id="main" role="main">
-	      <div class="container">
-					<div id="content"><%= render '/refinery/header' -%></div>
-	          	
-						<%= yield %>	      		
-
-	      </div> <!--! end of .container -->
-      <footer>
-				<div class="container">
-					<div class="contentx">
-		      <%= render '/refinery/footer' -%>				
-					</div>
-				</div>
-      </footer>
-
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	<%= render '/refinery/head' %>
+<head>
   <meta charset="utf-8">
   <title>Breakroom | Designed By Theme Armada</title>
   <meta name="keywords" content="made with bootstrap, wrap bootstrap themes, bootstrap agency theme, creative bootstrap sites, Agency11 theme, responsive bootstrap theme, mobile website themes, bootstrap portfolio, theme armada">
@@ -46,6 +13,16 @@
 	<meta property="og:site_name" content="Theme Armada">
 	<meta property="og:description" content="">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/custom-styles.css">
+
+  <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
   <!-- Fav and touch icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
@@ -316,7 +293,6 @@
   			</div>
   		</div>
   	</div>
-	 <%= render '/refinery/javascripts' %>
   </section>
   
     
@@ -343,4 +319,26 @@
     </script>
    
     </body>
+</html>
+
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header id="header">
+        <%= render '/refinery/header' -%>
+      </header>
+      <section id="page">
+        <%= yield %>
+      </section>
+      <footer>
+        <%= render '/refinery/footer' -%>
+      </footer>
+    </div>
+    <%= render '/refinery/javascripts' %>
+  </body>
 </html>
