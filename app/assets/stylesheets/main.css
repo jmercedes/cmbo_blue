@@ -162,7 +162,7 @@ iframe {
    ========================================================================== */
 
 .navbar-inverse .navbar-inner {
-  background-image: url(../img/menu-bg.jpg);
+  background-image: url(menu-bg.jpg);
   background-color: #2A2A2A;
   background-repeat: repeat-x;
   border-color: #2F3030;
@@ -343,7 +343,7 @@ a.login {
 
 /*------Header Image One---------*/
 .one {
-  background: url(../img/header1.jpg) no-repeat center center;
+  background: url(header1.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -351,7 +351,7 @@ a.login {
 /*------Header Image Two---------*/
 
 .two {
-  background: url(../img/header2.jpg) no-repeat center center;
+  background: url(header2.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -359,7 +359,7 @@ a.login {
 /*------Header Image Three---------*/
 
 .three {
-  background: url(../img/header3.jpg) no-repeat center center;
+  background: url(header3.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -445,7 +445,7 @@ a.login {
 }  
 
 .image-break {
-  background: url(../img/paper-texture.jpg) repeat-x;
+  background: url(paper-texture.jpg) repeat-x;
   height: 45px;
   opacity: 0.5;
   margin-bottom: 60px;
@@ -1487,17 +1487,4 @@ body {
 /* Large screens ----------- */
 @media (min-width: 1700px) and (max-width: 2200px) {
 
-}   
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
