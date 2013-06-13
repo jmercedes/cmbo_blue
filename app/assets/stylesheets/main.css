@@ -687,9 +687,9 @@ ul.team-social-icons li a:hover {
 	margin-left: 0px;
 	margin-right: 0px;
 	float: left;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 30px;
+  	overflow: hidden;
+  	position: relative;
+  	margin-bottom: 30px;
 }
 
 .thumbs a {
