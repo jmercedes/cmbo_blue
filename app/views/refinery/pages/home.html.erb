@@ -10,11 +10,12 @@
 			</div>
 	</div>  
 
+ 
 
- 	<div class="content">
+ 	<div class="content"> <!-- start content -->
 			
 
-   <div class="row">
+   <div class="row">  <!-- start row -->
     <div class="span12">
 			<div class="row-fluid">
 				
@@ -30,27 +31,47 @@
 
 				<div class="row-fluid dotted-top">
 				  <div class="span8">
-					<h1>Especialistas</h1>
-					<% @all_doctors = Refinery::Doctors::Doctor.all %>
+
+						<% @all_doctors = Refinery::Doctors::Doctor.all %>
 					
-					<% @doctor_branch = [] %>
-	        <% @all_doctors.each do |doctor| %>
-	        <% @doctor_branch << doctor.branch %>
-	        <% end %>
-	        <% @all_doctor_branch = @doctor_branch.uniq %>
+						<% @doctor_branch = [] %>
+		        <% @all_doctors.each do |doctor| %>
+		        <% @doctor_branch << doctor.branch %>
+		        <% end %>
+		        <% @all_doctor_branch = @doctor_branch.uniq %>
 					
-	        <% @all_doctor_branch.each do |branch| %>
-							<ul>
-								<li><%=h link_to branch, refinery.find_all_doctors_by_branch_path(:find_all_doctors_by_b => branch) %></li>
-							</ul>
-				  <% end %>
+		        <%# @all_doctor_branch.each do |branch| %>
+							
+								 <%#= link_to branch, refinery.find_all_doctors_by_branch_path(:find_all_doctors_by_b => branch) %>
+							
+					  <%# end %> 
+				
+				
+						  <!--Searching by branch-->
+							<div class="span3">
+								<%= image_tag "doctor_mini.jpg" %>
+						
+							</div>
+							<div class="span2">
+									<h1 style="margin_top:50px">Especialistas</h1>
+						      <%= form_tag refinery.find_all_doctors_by_branch_path do %>
+						        <%= select_tag "find_branch_doctors", options_for_select(@all_doctor_branch, @selected_branch_doctors),
+																	 :prompt => "Seleccione la especialidad...",
+																	 :id => "" %>
+
+						      <%= submit_tag "Buscar" %> 
+						      <% end %>
+							</div>
+		    
 
 				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 				</div>
-  </div>
-</div>
+				</div>
+ 
 
 </div>
+</div> <!-- end row -->
+</div> <!-- end content -->
 
 
 
