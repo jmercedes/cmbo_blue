@@ -41,7 +41,7 @@
 					
 	        <% @all_doctor_branch.each do |branch| %>
 							<ul>
-								<li><%=h link_to branch, '/doctors' %></li>
+								<li><%=h link_to branch, refinery.find_all_doctors_by_speciality_path(:find_speciality_doctors => branch) %></li>
 							</ul>
 				  <% end %>
 
