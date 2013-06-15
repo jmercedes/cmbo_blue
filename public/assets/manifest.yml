@@ -73,6 +73,8 @@ logo.png: logo-d35afad731de6b92822c99ecb48e5480.png
 logo/index.png: logo-d35afad731de6b92822c99ecb48e5480.png
 logo_cmbo.png: logo_cmbo-7134bf3edee520e3810f5f5d9d76d43c.png
 logo_cmbo/index.png: logo_cmbo-7134bf3edee520e3810f5f5d9d76d43c.png
+menu-bg-2.jpg: menu-bg-2-2c39f619090231b43823a5ec2e5e18e5.jpg
+menu-bg-2/index.jpg: menu-bg-2-2c39f619090231b43823a5ec2e5e18e5.jpg
 menu-bg.jpg: menu-bg-da8ff1e67313f099e0e5373d479af866.jpg
 menu-bg/index.jpg: menu-bg-da8ff1e67313f099e0e5373d479af866.jpg
 next.png: next-5b5e546843055afe7113c3c74605d9b7.png
@@ -121,8 +123,8 @@ woman_tag_cancer_bw.jpg: woman_tag_cancer_bw-9e9450d797ed682bc365378804ffd268.jp
 woman_tag_cancer_bw/index.jpg: woman_tag_cancer_bw-9e9450d797ed682bc365378804ffd268.jpg
 application.js: application-5e0e9a6dbec28f839103164e8df1f54d.js
 application/index.js: application-5e0e9a6dbec28f839103164e8df1f54d.js
-application.css: application-bea37ff9a775c5f8ab36e76b900ef579.css
-application/index.css: application-bea37ff9a775c5f8ab36e76b900ef579.css
+application.css: application-5350727bbfd98243ade03e168892fce0.css
+application/index.css: application-5350727bbfd98243ade03e168892fce0.css
 refinery/page-image-picker.js: refinery/page-image-picker-8a741f5d8dea4dab14fa3bf2401929a6.js
 refinery/page-image-picker/index.js: refinery/page-image-picker-8a741f5d8dea4dab14fa3bf2401929a6.js
 refinery/page-image-picker.css: refinery/page-image-picker-72dd361665b62847627db2e981397518.css

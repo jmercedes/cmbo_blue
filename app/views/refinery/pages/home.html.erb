@@ -1,44 +1,3 @@
-<!-- Carousel -->
-<div id="header" class="carousel slide animated fadeIn">
-  <div class="carousel-inner">
-    
-    <!--Item One-->
-    <div class="item one active">
-      <div class="container animated fadeInUp">
-        <div class="carousel-caption">
-          <h1><i>Comprometidos con tu salud</i></h1>
-          <h2><i>más cerca de tí. </i></h2>
-          <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
-        </div>
-      </div>
-    </div>
-    
-    <!--Item Two-->
-    <div class="item two">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1><i>Built With Bootstrap</i></h1>
-          <h2><i>And 100% Responsive</i></h2>
-          <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
-        </div>
-      </div>
-    </div>
-    
-    <!--Item Three-->
-    <div class="item three">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1><i>Lorem ipsum dolor sit</i></h1>
-          <h2><i>Curabitur viverra nulla non tel</i></h2>
-          <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <a class="left carousel-control hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
-  <a class="right carousel-control hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
-</div><!-- /.carousel -->
 
 <!--Large Well-->
 <section id="well">
@@ -64,6 +23,9 @@
       <div class="span3 text-center service-box">
         <a href="#">
           <i class="icon-thumbs-up icon-4x blue"></i>
+					<% @items = Refinery::News::Item.latest(1) %>
+					<%= render :partial => '/refinery/news/items/recent_posts' %>
+
           <h3>Unidos a una noble Causa</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
         </a>
@@ -167,11 +129,11 @@
 
 
 <!--Message Section-->
-<section id="message2">
+<section id="message">
   <div class="container">
     <div class="row-fluid">
       <div class="span12 text-center">
-        <h3>Nuestro compromiso, la salud de nuestros pacientes, garantizándo un cuidado médico personalizado y de óptima calidad</h3>
+        <h2>Nuestro compromiso, la salud de nuestros pacientes, garantizándo un cuidado médico personalizado y de óptima calidad.</h2>
       </div>
     </div>
   </div>
@@ -195,23 +157,23 @@
         </div>
         
         <div class="span2">
-          <a href="#"><img src="clients2.png" alt="Title"></a>
+          <a href="#"><%= image_tag "clients2.png" %></a>
         </div>
         
         <div class="span2">
-          <a href="#"><img src="clients3.png" alt="Title"></a>
+          <a href="#"><%= image_tag "clients3.png" %></a>
         </div>
         
         <div class="span2">
-          <a href="#"><img src="clients4.png" alt="Title"></a>
+          <a href="#"><%= image_tag "clients4.png" %></a>
         </div>
         
         <div class="span2">
-          <a href="#"><img src="clients1.png" alt="Title"></a>
+          <a href="#"><%= image_tag "clients1.png" %></a>
         </div>
         
         <div class="span2">
-          <a href="#"><img src="clients4.png" alt="Title"></a>
+          <a href="#"><%= image_tag "clients2.png" %></a>
         </div>
         
       </div>
@@ -247,10 +209,10 @@
 				
 				<div class="span4"><%= raw @page.content_for(:box_one) %></div>
 
-				<div class="span4 dotted"><% @items = Refinery::News::Item.latest(2) %>
+				<div class="span4 dotted"><% @items = Refinery::News::Item.latest(1) %>
 				<%= render :partial => '/refinery/news/items/recent_posts' %></div>
 
-				<div class="span4 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(2) %>
+				<div class="span4 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(1) %>
 				<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %></div>
 				</div>
         

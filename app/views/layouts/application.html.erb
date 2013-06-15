@@ -37,10 +37,57 @@
 
 					<%= render '/refinery/menu' %>
 
-        </div><!--/.nav-collapse -->
+        </div><!--/.nav-collapse --> 
+				
       </div>
     </div>
   </div>
+
+
+  <!-- Carousel -->
+  <div id="header" class="carousel slide animated fadeIn">
+    <div class="carousel-inner">
+      
+      <!--Item One-->
+      <div class="item one active">
+        <div class="container animated fadeInUp">
+          <div class="carousel-caption">
+            <h1><i>Welcome To Breakroom</i></h1>
+            <h2><i>A multipurpose Bootstrap Theme</i></h2>
+            <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
+          </div>
+        </div>
+      </div>
+      
+      <!--Item Two-->
+      <div class="item two">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><i>Built With Bootstrap</i></h1>
+            <h2><i>And 100% Responsive</i></h2>
+            <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
+          </div>
+        </div>
+      </div>
+      
+      <!--Item Three-->
+      <div class="item three">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><i>Lorem ipsum dolor sit</i></h1>
+            <h2><i>Curabitur viverra nulla non tel</i></h2>
+            <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <a class="left carousel-control hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
+    <a class="right carousel-control hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
+  </div><!-- /.carousel -->
+
+
+
           <%= yield %>
   <!--Bottom Section-->
   <section id="bottom">
