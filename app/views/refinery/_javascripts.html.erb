@@ -8,19 +8,4 @@
   <![endif]-->
 <% end %>
 <%= javascript_include_tag 'application' %>
-<%= javascript_include_tag 'jquery.nivo.slider.pack' %>
-<%= javascript_include_tag 'jquery.nivo.slider' %>
-
-<script type="text/javascript">
-$(window).load(function() {
-    $('#slider').nivoSlider({
-        effect: 'fade',
-        pauseTime: 5000,
-        directionNav:true,
-        controlNav:false
-
-    });
-});
-</script>
-
 <%= yield :javascripts -%>

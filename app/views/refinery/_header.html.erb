@@ -1,20 +1,7 @@
- <div class="row">
-
-    <div  class="span6">
-    <h1 id='logo'>
-      <%= link_to Refinery::Core.site_name, refinery.root_path %>
-    </h1>
-    </div>
-   <br>
-   <div class="span6">
-     <div class="row">
-           <span style="color:#0088CC; font-weight: bold; font-size: 10px; float: right;" ><a href="/trabaja-con-nosotros">Trabaja con nosotros</a> <!-- | <a href="/directorio-telefonico">Directorio telefonico</a> --> </span>
-     </div>
-      <br>
-      <div class="row">
-           <span style="color:#0088CC; font-weight: bold; font-size: 15px; float: right;">1.809.4.RESCUE | ASISTENCIA MÉDICA 24 HORAS</span>
-     </div>
-
-  </div>
-</div>
-
+<h1 id='logo'>
+  <%= link_to Refinery::Core.site_name, refinery.root_path %>
+</h1>
+<%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>

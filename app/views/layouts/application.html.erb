@@ -1,37 +1,125 @@
-<!doctype html>
-<html>
-<%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= render '/refinery/head' %>
-  <body>
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <header class="navbar navbar-fixed-top">
+<!DOCTYPE html>
+<html lang="en">
+<%= render '/refinery/head' %>
 
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'refinery/menu' %>
-          <%#= render 'layouts/navigation' %>
+<head>
+  <meta charset="utf-8">
+  <title>Breakroom | Designed By Theme Armada</title>
+  <meta name="keywords" content="made with bootstrap, wrap bootstrap themes, bootstrap agency theme, creative bootstrap sites, Agency11 theme, responsive bootstrap theme, mobile website themes, bootstrap portfolio, theme armada">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  
+  <meta property="og:title" content="Breakroom | Designed By Theme Armada">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://www.themearmada.com/demos/breakroom">
+	<meta property="og:site_name" content="Theme Armada">
+	<meta property="og:description" content="">
+
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+</head>
+
+<body>
+        
+  <div class="navbar navbar-inverse navbar-fixed-top animated fadeInDownBig">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/home"><img src="<%= asset_path("logo_cmbo_2.png") %>" alt="Title"></a>
+        <div class="nav-collapse collapse">
+
+					<%= render '/refinery/menu' %>
+
+        </div><!--/.nav-collapse --> 
+				
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Carousel -->
+  <div id="header" class="carousel slide animated fadeIn">
+    <div class="carousel-inner">
+      
+      <!--Item One-->
+      <div class="item one active">
+        <div class="container animated fadeInUp">
+          <div class="carousel-caption">
+            <h2>Contamos con Resonancia Magnética</h2>
+            <h3>
+	 				  Esta tecnología permite observar alteraciones en los tejidos<br>y detectar cáncer y otras patologías...
+					 </h3>
+            <a class="btn btn-success btn-large" href="#"><i class="icon-chevron-right"></i>Leer más</a>
+          </div>
         </div>
-      </nav>
+      </div>
+      
+      <!--Item Two-->
+      <div class="item two">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><i>Built With Bootstrap</i></h1>
+            <h2><i>And 100% Responsive</i></h2>
+            <a class="btn btn-success btn-large" href="#"><i class="icon-chevron-right"></i> See More</a>
+          </div>
+        </div>
+      </div>
+      
+      <!--Item Three-->
+      <div class="item three">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><i>Lorem ipsum dolor sit</i></h1>
+            <h2><i>Curabitur viverra nulla non tel</i></h2>
+            <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <a class="left carousel-control hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
+    <a class="right carousel-control hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
+  </div><!-- /.carousel -->
 
-    </header>
-    <div id="main" role="main">
-	      <div class="container">
-					<div id="content"><%= render '/refinery/header' -%></div>
-	          	
-						<%= yield %>	      		
 
-	      </div> <!--! end of .container -->
-      <footer>
-				<div class="container">
-					<div class="contentx">
-		      <%= render '/refinery/footer' -%>				
-					</div>
-				</div>
-      </footer>
-    </div> <!--! end of #main -->
-    <%= render '/refinery/javascripts' %>
-  </body>
+
+          <%= yield %>
+  
+  <section id="footer">
+    <div class="container">
+  		<div class="row-fluid">
+  			<div class="span4 text-left copyright">
+        	<p>&copy; Centro Médico Bournigal. All Rights Reserved.<br />
+        	Created by <a href="http://www.thedesignpill.com" target="_blank">The Design Pill</a></p><br />
+  			</div>
+  			
+  			<div class="span8 text-right">
+  				<ul class="footer-links">
+  					<li><a href="#" target="_blank">Trabaja con nosotros</a></li>
+  					<li><a href="#" target="_blank">Plantas de piso</a></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  
+    
+    
+    
+    <!--Twitter Handle - Insert your Twitter username below ex: (screen_name=USERNAME&include) -->
+    <script src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=themearmada&amp;include_rts=true&amp;count=4&amp;callback=twitterCallback2" type="text/javascript"></script>
+    
+     <%= render '/refinery/javascripts' %>
+   
+    </body>
 </html>
 
