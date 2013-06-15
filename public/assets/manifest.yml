@@ -43,6 +43,8 @@ clients3.png: clients3-6a7e0ba65d4cc3b0c41525e0c8cfb855.png
 clients3/index.png: clients3-6a7e0ba65d4cc3b0c41525e0c8cfb855.png
 clients4.png: clients4-8d75b14beb1e3b64555bfea5c436ea48.png
 clients4/index.png: clients4-8d75b14beb1e3b64555bfea5c436ea48.png
+doctor_especialistas.jpg: doctor_especialistas-91840fd0c87a0a7d1272fc5a2bbea822.jpg
+doctor_especialistas/index.jpg: doctor_especialistas-91840fd0c87a0a7d1272fc5a2bbea822.jpg
 dot-tile.png: dot-tile-fcd0f42db0f67ba60aadfc6e7025644a.png
 dot-tile/index.png: dot-tile-fcd0f42db0f67ba60aadfc6e7025644a.png
 dot.gif: dot-ad020cd70422b48f1e2dec570f071f55.gif
@@ -113,8 +115,14 @@ team3.jpg: team3-e1327cb2a79dbe398854c52f594c1514.jpg
 team3/index.jpg: team3-e1327cb2a79dbe398854c52f594c1514.jpg
 team4.jpg: team4-1253f4f93031ac1e281b49e2ceb58a92.jpg
 team4/index.jpg: team4-1253f4f93031ac1e281b49e2ceb58a92.jpg
-application.css: application-cb83bd9154229aecc7e1a96d92f81afc.css
-application/index.css: application-cb83bd9154229aecc7e1a96d92f81afc.css
+woman_tag_cancer.jpg: woman_tag_cancer-1eaa503ccd0733843c6861f83591bf2a.jpg
+woman_tag_cancer/index.jpg: woman_tag_cancer-1eaa503ccd0733843c6861f83591bf2a.jpg
+woman_tag_cancer_bw.jpg: woman_tag_cancer_bw-9e9450d797ed682bc365378804ffd268.jpg
+woman_tag_cancer_bw/index.jpg: woman_tag_cancer_bw-9e9450d797ed682bc365378804ffd268.jpg
+application.js: application-5e0e9a6dbec28f839103164e8df1f54d.js
+application/index.js: application-5e0e9a6dbec28f839103164e8df1f54d.js
+application.css: application-5ddd71899f435c3f09d7bb39673c6e41.css
+application/index.css: application-5ddd71899f435c3f09d7bb39673c6e41.css
 refinery/page-image-picker.js: refinery/page-image-picker-8a741f5d8dea4dab14fa3bf2401929a6.js
 refinery/page-image-picker/index.js: refinery/page-image-picker-8a741f5d8dea4dab14fa3bf2401929a6.js
 refinery/page-image-picker.css: refinery/page-image-picker-72dd361665b62847627db2e981397518.css
@@ -983,8 +991,6 @@ wymeditor/skins/wymeditor_icon.png: wymeditor/skins/wymeditor_icon-6873efc118c50
 wymeditor/skins/wymeditor_icon/index.png: wymeditor/skins/wymeditor_icon-6873efc118c50e9726ab0b089740b0af.png
 admin.js: admin-29a64ecc81ddc22f56add7908f6f77a6.js
 admin/index.js: admin-29a64ecc81ddc22f56add7908f6f77a6.js
-application.js: application-1b13569e9620782f423d4cd3ce931750.js
-application/index.js: application-1b13569e9620782f423d4cd3ce931750.js
 dd_belatedpng.js: dd_belatedpng-07a4fffccfa09efcb5197daa304fcf0e.js
 dd_belatedpng/index.js: dd_belatedpng-07a4fffccfa09efcb5197daa304fcf0e.js
 jquery/GPL-LICENSE.txt: jquery/GPL-LICENSE-1fa0858d14c353db8e9a7b0ee25db27f.txt
