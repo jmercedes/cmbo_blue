@@ -37,10 +37,6 @@ bullet_green.png: bullet_green-0ee0afc7a2d6ca7708213bf3b0ca25a5.png
 bullet_green/index.png: bullet_green-0ee0afc7a2d6ca7708213bf3b0ca25a5.png
 bullets.png: bullets-a5fbbe7fb25eab4b36a278b05ee0420a.png
 bullets/index.png: bullets-a5fbbe7fb25eab4b36a278b05ee0420a.png
-<<<<<<< HEAD
-doctor_mini.jpg: doctor_mini-f94e511b899c2ea75bf9b0236cd35e90.jpg
-doctor_mini/index.jpg: doctor_mini-f94e511b899c2ea75bf9b0236cd35e90.jpg
-=======
 clients1.png: clients1-d847916c9a4b42d3dbfb5c3956e19d9b.png
 clients1/index.png: clients1-d847916c9a4b42d3dbfb5c3956e19d9b.png
 clients2.png: clients2-895f1b714523ed9daa08619f71c8af10.png
@@ -51,9 +47,10 @@ clients4.png: clients4-8d75b14beb1e3b64555bfea5c436ea48.png
 clients4/index.png: clients4-8d75b14beb1e3b64555bfea5c436ea48.png
 doctor_especialistas.jpg: doctor_especialistas-2989e65278a66a5f7229d3bc29f47fba.jpg
 doctor_especialistas/index.jpg: doctor_especialistas-2989e65278a66a5f7229d3bc29f47fba.jpg
+doctor_mini.jpg: doctor_mini-f94e511b899c2ea75bf9b0236cd35e90.jpg
+doctor_mini/index.jpg: doctor_mini-f94e511b899c2ea75bf9b0236cd35e90.jpg
 dot-tile.png: dot-tile-fcd0f42db0f67ba60aadfc6e7025644a.png
 dot-tile/index.png: dot-tile-fcd0f42db0f67ba60aadfc6e7025644a.png
->>>>>>> breakroom
 dot.gif: dot-ad020cd70422b48f1e2dec570f071f55.gif
 dot/index.gif: dot-ad020cd70422b48f1e2dec570f071f55.gif
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
