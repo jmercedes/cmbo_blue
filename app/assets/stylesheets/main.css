@@ -343,7 +343,7 @@ a.login {
 
 /*------Header Image One---------*/
 .one {
-  background: url(header1.jpg) no-repeat center center;
+  background: url(header_test.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -406,7 +406,7 @@ a.login {
 }
 
 .service-box {
-  border-bottom: 7px solid rgba(134,205,212,0.15);
+  border-bottom: 7px solid rgba(150,197,220,0.15);
   text-decoration: none;
   padding: 35px 10px 25px 10px;
 } 
@@ -420,7 +420,7 @@ a.login {
 }
 
 .service-box:hover {
-  border-bottom: 7px solid #84CCD3;
+  border-bottom: 7px solid #7BB5D2;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
 }
@@ -428,8 +428,8 @@ a.login {
 
 #message {
   background: #7BC143;
-  padding-bottom: 120px;
-  padding-top: 120px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 #message2 {
@@ -1140,7 +1140,7 @@ z-index: 1;
 }
 
 #bottom h2 {
-  color: #84CCD3;
+  color: #33A0D6;
 }
 
 #bottom p {
@@ -1148,7 +1148,7 @@ z-index: 1;
 }
 
 a.more {
-  color: #84CCD3; 
+  color: #33A0D6; 
   font-weight: bold;
 }
 
@@ -1219,7 +1219,7 @@ ul.social-icons li a:hover {
 }
 
 #footer {
-  background: #2A2A2A;
+  background: #0088CC;
   padding-top: 20px;
   padding-bottom: 60px;
 }

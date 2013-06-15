@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<%= render '/refinery/head' %>
+
 <head>
   <meta charset="utf-8">
   <title>Breakroom | Designed By Theme Armada</title>
@@ -32,7 +34,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="/home"><img src="<%= asset_path("logo.png") %>" alt="Title"></a>
+        <a class="brand" href="/home"><img src="<%= asset_path("logo_cmbo_2.png") %>" alt="Title"></a>
         <div class="nav-collapse collapse">
 
 					<%= render '/refinery/menu' %>
@@ -52,9 +54,11 @@
       <div class="item one active">
         <div class="container animated fadeInUp">
           <div class="carousel-caption">
-            <h1><i>Welcome To Breakroom</i></h1>
-            <h2><i>A multipurpose Bootstrap Theme</i></h2>
-            <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
+            <h2>Contamos con Resonancia Magnética</h2>
+            <h3>
+	 				  Esta tecnología permite observar alteraciones en los tejidos<br>y detectar cáncer y otras patologías...
+					 </h3>
+            <a class="btn btn-success btn-large" href="#"><i class="icon-chevron-right"></i>Leer más</a>
           </div>
         </div>
       </div>
@@ -65,7 +69,7 @@
           <div class="carousel-caption">
             <h1><i>Built With Bootstrap</i></h1>
             <h2><i>And 100% Responsive</i></h2>
-            <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
+            <a class="btn btn-success btn-large" href="#"><i class="icon-chevron-right"></i> See More</a>
           </div>
         </div>
       </div>
@@ -89,56 +93,6 @@
 
 
           <%= yield %>
-  <!--Bottom Section-->
-  <section id="bottom">
-    <div class="container">
-      <div class="row-fluid">
-        
-        <!--Bottom Section One-->
-        <div class="span4">
-          <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br />
-            <a class="more" href="#">+ More</a>
-        </div>
-        
-        <!--Bottom Section Two-->
-        <div class="span4">
-          <h2>Latest Tweets</h2>
-          <div class="row-fluid">
-            <div class="span2">
-              <i class="icon-twitter icon-2x blue pull-left" style="padding-top:12px;"></i>
-            </div>
-            
-            <div class="span10">
-              <div class="twitter-feed">
-      					<ul id="twitter_update_list" class="rotate"></ul>
-      				</div>
-            </div>
-  				</div>    		  
-        </div>
-        
-        <!--Bottom Section Three-->
-        <div class="span4">
-          <h2>Contact Info</h2>
-          <p>1234 Main Street | Suit 300<br />
-          Atlanta, GA 30303</p>
-          <p><i class="icon-phone"></i> <a class="more" href="tel:404.555.5555">404.555.5555</a></p>
-          
-          <!--Social Icons-->          
-          <ul class="social-icons">
-  					<li><a class="twitter" href="http://www.twitter.com/themearmada" target="_blank"><i class="icon-twitter icon-large"></i></a></li>
-  					<li><a class="facebook" href="http://www.facebook.com" target="_blank"><i class="icon-facebook icon-large"></i></a></li>
-  					<li><a class="google" href="http://www.googleplus.com" target="_blank"><i class="icon-google-plus icon-large"></i></a></li>
-  					<li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="icon-camera-retro icon-large"></i></a></li>
-  					<li><a class="pinterest" href="http://www.pinterest.com" target="_blank"><i class="icon-pinterest icon-large"></i></a></li>
-  					<li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="icon-linkedin icon-large"></i></a></li>
-  					<li><a class="Github" href="http://www.github.com" target="_blank"><i class="icon-github-alt icon-large"></i></a></li>
-  				</ul>
-        </div>
-        
-      </div>
-    </div>
-  </section>
   
   <section id="footer">
     <div class="container">
@@ -150,8 +104,8 @@
   			
   			<div class="span8 text-right">
   				<ul class="footer-links">
-  					<li><a href="#" target="_blank">Menu 1</a></li>
-  					<li><a href="#" target="_blank">Menu 2</a></li>
+  					<li><a href="#" target="_blank">Trabaja con nosotros</a></li>
+  					<li><a href="#" target="_blank">Plantas de piso</a></li>
   				</ul>
   			</div>
   		</div>
@@ -164,30 +118,8 @@
     <!--Twitter Handle - Insert your Twitter username below ex: (screen_name=USERNAME&include) -->
     <script src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=themearmada&amp;include_rts=true&amp;count=4&amp;callback=twitterCallback2" type="text/javascript"></script>
     
+     <%= render '/refinery/javascripts' %>
    
     </body>
 </html>
-
-<!DOCTYPE html>
-<%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= render '/refinery/head' %>
-  <body>
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
-      <header id="header">
-        <%= render '/refinery/header' -%>
-      </header>
-      <section id="page">
-
-      </section>
-      <footer>
-        <%= render '/refinery/footer' -%>
-      </footer>
-    </div>
-    <%= render '/refinery/javascripts' %>
-  </body>
-</html>
-
 

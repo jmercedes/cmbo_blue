@@ -5,8 +5,7 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span12 text-center">
-          <h3><strong>LOREM IPSUM DOLOR</strong>
- 				 - <span><em>Curabitur viverra nulla non tellus suscipit condimentum eget.</em></span></h3>
+          <h3>1.809.4.RESCUE | ASISTENCIA MÉDICA 24 HORAS</h3>
         </div>
       </div>
     </div>
@@ -23,8 +22,6 @@
       <div class="span3 text-center service-box">
         <a href="#">
           <i class="icon-thumbs-up icon-4x blue"></i>
-					<% @items = Refinery::News::Item.latest(1) %>
-					<%= render :partial => '/refinery/news/items/recent_posts' %>
 
           <h3>Unidos a una noble Causa</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
@@ -114,7 +111,7 @@
           <div class="span9 text-left">
             <h2>Sólo 10 minutos</h2>
             <p>Realizarte un autoexamen mamario periódicamente puede reducir el riesgo de cáncer de mama.</p>
-						<p><%= link_to "Aprende como hacerlo aquí", "#", :class => "btn-main-small"  %></p>
+						<p><%= link_to "Aprende como hacerlo aquí", "#", :class => "btn btn-success"  %></p>
           </div>
         </div>
       </div>
@@ -177,8 +174,10 @@
         </div>
         
       </div>
+			
 			<div class="span12 text-center">
-        <h2>we strive</h2>
+				
+				<%= link_to "ver todos..", "#", :class => "btn btn-success btn-large" %>
       </div>
       
     </div>
@@ -186,69 +185,3 @@
 
 
 
-<!-- Nivo Slider -->
-	<div class="slider-wrapper theme-default">
-	    <div id="slider" class="nivoSlider">
-		    <% @page.images.each_with_index do |img, index| %>      
-		        <%= image_tag img.url, :title => '#htmlcaption' %>
-						<div id="htmlcaption" class="nivo-html-caption">
-						<%=raw @page.caption_for_image_index(index) %>
-						</div>
-        <% end %>  
-			</div>
-	</div>  
-
- 
-
- 	<div class="content"> <!-- start content -->
-			
-
-   <div class="row">  <!-- start row -->
-    <div class="span12">
-			<div class="row-fluid">
-				
-				<div class="span4"><%= raw @page.content_for(:box_one) %></div>
-
-				<div class="span4 dotted"><% @items = Refinery::News::Item.latest(1) %>
-				<%= render :partial => '/refinery/news/items/recent_posts' %></div>
-
-				<div class="span4 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(1) %>
-				<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %></div>
-				</div>
-        
-
-				<div class="row-fluid dotted-top">
-				  <div class="span8">
-
-					
-		        <%# @all_doctor_branch.each do |branch| %>
-							
-								 <%#= link_to branch, refinery.find_all_doctors_by_branch_path(:find_all_doctors_by_b => branch) %>
-							
-					  <%# end %> 
-				
-				
-						  <!--Searching by branch-->
-							<div class="span3">
-								<%= image_tag "doctor_mini.jpg" %>
-						
-							</div>
-							<div class="span2">
-									<h1 style="margin_top:50px">Especialistas</h1>
-							</div>
-		    
-
-				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
-				</div>
-				</div>
- 
-
-</div>
-</div> <!-- end row -->
-</div> <!-- end content -->
-
-
-
-
-
-<%= render '/refinery/content_page' %>
