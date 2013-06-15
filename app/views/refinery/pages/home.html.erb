@@ -6,8 +6,8 @@
     <div class="item one active">
       <div class="container animated fadeInUp">
         <div class="carousel-caption">
-          <h1><i>Welcome To Breakroom X</i></h1>
-          <h2><i>A multipurpose Bootstrap Theme</i></h2>
+          <h1><i>Comprometidos con tu salud</i></h1>
+          <h2><i>más cerca de tí. </i></h2>
           <a class="btn-main" href="#"><i class="icon-chevron-right"></i> See More</a>
         </div>
       </div>
@@ -39,6 +39,263 @@
   <a class="left carousel-control hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
   <a class="right carousel-control hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
 </div><!-- /.carousel -->
+
+<!--Large Well-->
+<section id="well">
+  <div class="well well-large">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12 text-center">
+          <h3><strong>LOREM IPSUM DOLOR</strong>
+ 				 - <span><em>Curabitur viverra nulla non tellus suscipit condimentum eget.</em></span></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Services Section-->
+<section id="services">
+  <div class="container">
+    <div class="row-fluid">
+      
+      <!--Service Section One-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <i class="icon-thumbs-up icon-4x blue"></i>
+          <h3>Unidos a una noble Causa</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+      
+      <!--Service Section Two-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <i class="icon-flag icon-4x blue"></i>
+          <h3>Únete a nuestro club de donantes</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+      
+      <!--Service Section Three-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <i class="icon-mobile-phone icon-4x blue"></i>
+          <h3>Toma de muestras a domicilio</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+      
+      <!--Service Section Three-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <i class="icon-file-alt icon-4x blue"></i>
+          <h3>Conoce todo sobre el Asma</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <div class="row-fluid">
+      <div class="span12">
+
+      </div>
+    </div>
+    
+    <!--First Service Row-->
+    <div class="row-fluid service-grid">
+      <div class="span6">
+        <div class="row-fluid">
+          <div class="span3 text-center">
+						<%= image_tag "doctor_especialistas.jpg" %>
+          </div>
+          
+          <div class="span9 text-left">
+					   <h2>Consulta con nuestros especialistas</h2>
+						
+						<% @all_doctors = Refinery::Doctors::Doctor.all %>
+					
+						<% @doctor_branch = [] %>
+		        <% @all_doctors.each do |doctor| %>
+		        <% @doctor_branch << doctor.branch %>
+		        <% end %>
+		        <% @all_doctor_branch = @doctor_branch.uniq %>
+
+						<div class="control-group">  
+              <div class="controls">
+	  						<%= form_tag refinery.find_all_doctors_by_branch_path do %>
+					        <%= select_tag "find_branch_doctors", options_for_select(@all_doctor_branch, @selected_branch_doctors),
+																 :prompt => "Seleccione la especialidad...",
+																 :id => "",
+																 :class => "input-block-level" %>
+								  <br>
+								  <%= submit_tag "Buscar", :class => "btn btn-success" %> 
+									<% end %>
+								
+              </div>  
+            </div>  
+          </div>
+        </div>
+      </div>
+      
+      <div class="span6">
+        <div class="row-fluid">
+          <div class="span3 text-center">
+						<%= image_tag "woman_tag_cancer_bw.jpg" %>
+          </div>
+          
+          <div class="span9 text-left">
+            <h2>Sólo 10 minutos</h2>
+            <p>Realizarte un autoexamen mamario periódicamente puede reducir el riesgo de cáncer de mama.</p>
+						<p><%= link_to "Aprende como hacerlo aquí", "#", :class => "btn-main-small"  %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--Second Service Row-->
+    <div class="row-fluid service-grid">
+      <div class="span6">
+        <div class="row-fluid">
+          
+        </div>
+      </div>
+      
+      <div class="span6">
+        <div class="row-fluid">
+          
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>  
+
+
+<!--Message Section-->
+<section id="message">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12 text-center">
+        <h2>We strive to out work our competition with an effective approach and a powerful skill set, which is why were industry leading.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Clients Section-->
+<section id="clients">
+  <div class="image-break"> </div>
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <h2>Seguros médicos</h2>
+        </div>
+      </div>
+      
+      <div class="row-fluid clients text-center">
+        
+        <!--Insert Client Logos Below-->
+        <div class="span2">
+          <a href="#"><img src="clients1.png" alt="Title"></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><img src="clients2.png" alt="Title"></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><img src="clients3.png" alt="Title"></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><img src="clients4.png" alt="Title"></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><img src="clients1.png" alt="Title"></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><img src="clients4.png" alt="Title"></a>
+        </div>
+        
+      </div>
+    </div>
+</section>
+
+
+
+<!-- Nivo Slider -->
+	<div class="slider-wrapper theme-default">
+	    <div id="slider" class="nivoSlider">
+		    <% @page.images.each_with_index do |img, index| %>      
+		        <%= image_tag img.url, :title => '#htmlcaption' %>
+						<div id="htmlcaption" class="nivo-html-caption">
+						<%=raw @page.caption_for_image_index(index) %>
+						</div>
+        <% end %>  
+			</div>
+	</div>  
+
+ 
+
+ 	<div class="content"> <!-- start content -->
+			
+
+   <div class="row">  <!-- start row -->
+    <div class="span12">
+			<div class="row-fluid">
+				
+				<div class="span4"><%= raw @page.content_for(:box_one) %></div>
+
+				<div class="span4 dotted"><% @items = Refinery::News::Item.latest(2) %>
+				<%= render :partial => '/refinery/news/items/recent_posts' %></div>
+
+				<div class="span4 dotted"><% @blog_posts = Refinery::Blog::Post.live.limit(2) %>
+				<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %></div>
+				</div>
+        
+
+				<div class="row-fluid dotted-top">
+				  <div class="span8">
+
+					
+		        <%# @all_doctor_branch.each do |branch| %>
+							
+								 <%#= link_to branch, refinery.find_all_doctors_by_branch_path(:find_all_doctors_by_b => branch) %>
+							
+					  <%# end %> 
+				
+				
+						  <!--Searching by branch-->
+							<div class="span3">
+								<%= image_tag "doctor_mini.jpg" %>
+						
+							</div>
+							<div class="span2">
+									<h1 style="margin_top:50px">Especialistas</h1>
+							</div>
+		    
+
+				  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
+				</div>
+				</div>
+ 
+
+</div>
+</div> <!-- end row -->
+</div> <!-- end content -->
+
+
+
 
 
 <%= render '/refinery/content_page' %>
