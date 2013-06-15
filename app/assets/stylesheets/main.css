@@ -432,6 +432,14 @@ a.login {
   padding-top: 120px;
 }
 
+#message2 h2 {
+  background: #84CCD3;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  color:#FFF;
+}
+
+
 #message h2 {
   color: #FFFFFF;
   font-size: 43px;
