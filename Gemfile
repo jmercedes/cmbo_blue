@@ -22,8 +22,8 @@ end
 #gem 'therubyracer', :require => 'v8', :platforms => :ruby
 
 
-gem "psych", "~> 1.3.4"
-gem "sunspot_rails"
+#gem "psych", "~> 1.3.4"
+#gem "sunspot_rails"
 
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
@@ -38,9 +38,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'libv8'
+#gem 'libv8'
 
-gem 'colorbox-rails'
+#gem 'colorbox-rails'
 gem 'jquery-rails', '~> 2.0.0'
 
 gem 'bootstrap-will_paginate'
