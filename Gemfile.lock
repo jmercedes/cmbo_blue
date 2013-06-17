@@ -114,6 +114,7 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    psych (1.3.4)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -252,6 +253,7 @@ DEPENDENCIES
   jquery-rails (~> 2.0.0)
   meta_search
   pg
+  psych (~> 1.3.4)
   rails (= 3.2.13)
   rails_bootstrap_navbar
   refinerycms (~> 2.0.10)

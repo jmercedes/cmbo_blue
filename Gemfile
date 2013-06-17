@@ -10,6 +10,7 @@ gem 'fog'
 
 group :development, :test do
   gem 'sqlite3'
+  gem "psych", "~> 1.3.4"
 end
 
 group :production do
@@ -22,7 +23,7 @@ end
 #gem 'therubyracer', :require => 'v8', :platforms => :ruby
 
 
-#gem "psych", "~> 1.3.4"
+
 #gem "sunspot_rails"
 
 group :assets do
