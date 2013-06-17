@@ -1,18 +1,22 @@
-
-<div class="row-fluid">
-  <div class="span12">
-    <h2>Sobre Centro Médico Bournigal</h2>
-    <p class="lead">Learn About Who We Are</p>
-    <p><%= raw @page_content(:body) %></p>
+<!--Main Content-->
+<section id="content">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12">
+        
+        <!--Bread Crumbs-->
+        <ul class="breadcrumb">
+          <li><a href="#">Home</a> <span class="divider">/</span></li>
+          <li class="active">About</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <%= raw @page.content_for(:body) %>
+      </div>
+    </div>
+    
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
+</section>  
