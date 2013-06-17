@@ -1,0 +1,186 @@
+
+<!--Large Well-->
+<section id="well">
+  <div class="well well-large">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12 text-center">
+          <h3>1.809.4.RESCUE | ASISTENCIA MÉDICA 24 HORAS</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Services Section-->
+<section id="services">
+  <div class="container">
+    <div class="row-fluid">
+      
+      <!--Service Section One-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
+
+          <h3>Unidos a una noble Causa</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+      
+      <!--Service Section Two-->
+          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
+        <a href="#">
+          <i class="icon-flag icon-4x blue"></i>
+          <h3>Únete a nuestro club de donantes</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+      
+      <!--Service Section Three-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
+          <h3>Toma de muestras a domicilio</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+      
+      <!--Service Section Three-->
+      <div class="span3 text-center service-box">
+        <a href="#">
+          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
+          <h3>Conoce todo sobre el Asma</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <div class="row-fluid">
+      <div class="span12">
+
+      </div>
+    </div>
+    
+    <!--First Service Row-->
+    <div class="row-fluid service-grid">
+      <div class="span6">
+        <div class="row-fluid">
+          <div class="span3 text-center">
+						<%= image_tag "doctor_especialistas.jpg" %>
+          </div>
+          
+          <div class="span9 text-left">
+					   <h2>Consulta con nuestros especialistas</h2>
+						
+						<% @all_doctors = Refinery::Doctors::Doctor.all %>
+					
+						<% @doctor_branch = [] %>
+		        <% @all_doctors.each do |doctor| %>
+		        <% @doctor_branch << doctor.branch %>
+		        <% end %>
+		        <% @all_doctor_branch = @doctor_branch.uniq %>
+
+						<div class="control-group">  
+              <div class="controls">
+	  						<%= form_tag refinery.find_all_doctors_by_branch_path do %>
+					        <%= select_tag "find_branch_doctors", options_for_select(@all_doctor_branch, @selected_branch_doctors),
+																 :prompt => "Seleccione la especialidad...",
+																 :id => "",
+																 :class => "input-block-level" %>
+								  <br>
+								  <%= submit_tag "Buscar", :class => "btn btn-success" %> 
+									<% end %>
+								
+              </div>  
+            </div>  
+          </div>
+        </div>
+      </div>
+      
+      <div class="span6">
+        <div class="row-fluid">
+          <div class="span3 text-center">
+						<%= image_tag "woman_tag_cancer_bw.jpg" %>
+          </div>
+          
+          <div class="span9 text-left">
+            <h2>Sólo 10 minutos</h2>
+            <p>Realizarte un autoexamen mamario periódicamente puede reducir el riesgo de cáncer de mama.</p>
+						<p><%= link_to "Aprende como hacerlo aquí", "#", :class => "btn btn-success"  %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--Second Service Row-->
+    
+    
+  </div>
+</section>  
+
+
+<!--Message Section-->
+<section id="message">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12 text-center">
+        <h2>Nuestro compromiso, la salud de nuestros pacientes, garantizándo un cuidado médico personalizado y de óptima calidad.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Clients Section-->
+<section id="clients">
+  <div class="image-break"> </div>
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <h2>Seguros médicos</h2>
+        </div>
+      </div>
+      
+      <div class="row-fluid clients text-center">
+        
+        <!--Insert Client Logos Below-->
+        <div class="span2">
+          <a href="#"><%= image_tag "clients1.png" %></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><%= image_tag "clients2.png" %></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><%= image_tag "clients3.png" %></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><%= image_tag "clients4.png" %></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><%= image_tag "clients1.png" %></a>
+        </div>
+        
+        <div class="span2">
+          <a href="#"><%= image_tag "clients2.png" %></a>
+        </div>
+        
+      </div>
+			
+			<div class="span12 text-center">
+				
+				<%= link_to "ver todos..", "#", :class => "btn btn-success btn-large" %>
+      </div>
+      
+    </div>
+</section>
+
+
