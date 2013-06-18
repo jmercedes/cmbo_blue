@@ -1,4 +1,8 @@
 es:
+  date:
+      formats:
+          day: '%d'
+          month: '%b'
   refinery:
     plugins:
       refinerycms_news:
