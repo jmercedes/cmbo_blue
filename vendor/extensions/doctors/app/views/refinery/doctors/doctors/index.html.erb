@@ -1,73 +1,106 @@
-<div class="content">
-	                     
-<div class="clearfix">
-  <div class="row-fluid">
+<!--Content Section One-->
+  <section id="blog">
+  	<div class="container">
+  		<div class="row-fluid">
+      <div class="span12">
+        
+        <!--Bread Crumbs-->
+        <ul class="breadcrumb">
+          <li><a href="#">Home</a> <span class="divider">/</span></li>
+          <li><a href="#">Blog</a> <span class="divider">/</span></li>
+          <li class="active">Blog Article Title</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="row-fluid"
+  			
+  			<!--Blog Article Container-->
+  			<div class="span9 article-container">
+  				
+  				<!--Article One -->
+  				<div class="row-fluid blog-article">
+	    			<div class="span2 text-center">
+             </div>
+	    			
+	    			<div class="span10">
+						<h2>Consuta con nuestro especialistas</h2>
+							<%= form_tag refinery.find_all_doctors_by_branch_path do %>
+				        <%= select_tag "find_branch_doctors", options_for_select(@all_doctor_branch, @selected_branch_doctors),
+															 :prompt => "Seleccione la especialidad...",
+															 :class => 'input-block-level',
+															 :id => "" %>
 
+				      <br>
+							<%= submit_tag "Buscar", :class => "btn-success btn-large" %> 
+				      <% end %>
+				      <hr>
+	
+							<% @doctors.each do |doctor| %>
 
-    <% content_for :side_body do %>
-      <%= raw @page.content_for(:side_body) %>
-    <% end %>
+				        <div class="span2">
+				          <div class="image_border">
+											<%= link_to (image_fu doctor.dr_img, '104x104'), refinery.doctors_doctor_path(doctor) %></div>
+				        </div>
 
-    <% content_for :body do %>
+				        <div class="span8">
+				          <h3 class="blue">
+									<%= link_to doctor.prefix,  refinery.doctors_doctor_path(doctor),    :class => "blue" %>
+									<%= link_to doctor.full_name,  refinery.doctors_doctor_path(doctor), :class => "blue" %>
+									<%= link_to doctor.specialty,  refinery.doctors_doctor_path(doctor), :class => "blue" %>									
+									</h3>
+				          <p>Horario: <%= doctor.schedule %><br>Consultorio: <%= doctor.location %></p>
+				        </div>
+				        <div class="clearfix"></div>
 
-      <%= form_tag refinery.search_path do -%>
-        <%= text_field_tag :query, {}, {:type => "search",
-                                        :placeholder => "Buscar",
-                                        :value => (params[:query] if params[:query])} %>
-        <%= submit_tag 'Go' %>
-      <% end %>
+				        <hr>
 
-      <!--Searching by speciality-->
-      <%#= form_tag refinery.find_all_doctors_by_speciality_path do %>
-        <%#= select_tag "find_speciality_doctors", options_for_select(@all_doctor_speciality,@selected_speciality_doctors),
-											 :prompt => "Seleccione la especialidad...",
-											 :id => "" %>
-											
-        <%#= submit_tag "Search" %>
-      <%# end %>
+				      <% end %>
+						  <%= will_paginate @doctors %>
+				      
 
-       <%#= doctor_index %>
-
-      <!--Searching by branch-->
-      <%= form_tag refinery.find_all_doctors_by_branch_path do %>
-        <%= select_tag "find_branch_doctors", options_for_select(@all_doctor_branch, @selected_branch_doctors),
-											 :prompt => "Seleccione la especialidad...",
-											 :id => "" %>
-											
-      <%= submit_tag "Search" %> 
-      <% end %>
-
-			 <hr>
-      <% @doctors.each do |doctor| %>
-
-        <div class="span3">
-          <p><%= image_fu doctor.dr_img, '120x120' %></p>
-        </div>
-
-        <div class="span8">
-          <p><strong><%= doctor.prefix + ' ' + doctor.full_name %></strong>
-            <br>
-            <%= doctor.specialty %>
-          </p>
-
-          <p><strong>Horario: </strong><%= doctor.schedule %> |
-            <strong>Consultorio: </strong><%= doctor.location %><br><br>
-            <%= link_to "Biografía", refinery.doctors_doctor_path(doctor), class: "btn btn-mini btn-primary" %>
-          </p>
-        </div>
-        <div class="clearfix"></div>
-
-        <hr>
-
-        <%#= link_to doctor.prefix, refinery.doctors_doctor_path(doctor) %>
-
-      <% end %>
-      <%= will_paginate @doctors %>
-
-    <% end %>
-
-    <%= render '/refinery/content_page' %>
-  </div>
-</div>
-
-</div>
+	    			</div>
+  				</div><!--End Article-->
+  				
+  			</div><!--End Blog Article Container-->
+  			
+  			
+  			<!--Right Side Bar-->
+  			<div class="span3 sidebar-container">
+					<%= raw @page.content_for(:side_body) %>
+  				<h2>Side Bar</h2>
+  				<p>Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  				<br />
+  				
+  				<hr>
+  				
+  				<h2>Instagram</h2>
+  				
+  				<!--Visit "Snapwidget.com" - Use Settings: 80px wide for images, 3x2 for the grid, and FadeOut on Hover-->
+					<!-- SnapWidget -->
+					<div style="height:200px;">
+					<iframe src="http://snapwidget.com/in/?u=amVmZmNvcmV5fGlufDgwfDN8Mnx8bm98NXxmYWRlT3V0"></iframe>
+					</div>
+					
+					<hr>
+					
+					<h2>Links</h2>
+					<ul class="unstyled blog-links">
+  				  <li><a href="http://www.themearmada.com"><i class="icon-angle-right"></i> Theme Armada</a></li>
+  				  <li><a href="http://www.twitter.com/themearmada"><i class="icon-angle-right"></i> Twitter Link</a></li>
+  				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Three</a></li>
+  				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Four</a></li>
+					</ul>
+					
+					<hr>
+					
+					<div class="boxed">
+					 <h2>Boxed</h2>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc.</p>
+					</div>
+				
+  			</div><!--End Span-->
+  			
+  		</div>
+  	</div>
+  </section>
