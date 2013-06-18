@@ -47,9 +47,10 @@
 				          <h3 class="blue">
 									<%= link_to doctor.prefix,  refinery.doctors_doctor_path(doctor),    :class => "blue" %>
 									<%= link_to doctor.full_name,  refinery.doctors_doctor_path(doctor), :class => "blue" %>
-									<%= link_to doctor.specialty,  refinery.doctors_doctor_path(doctor), :class => "blue" %>									
 									</h3>
-				          <p>Horario: <%= doctor.schedule %><br>Consultorio: <%= doctor.location %></p>
+									<p><strong><%= link_to doctor.specialty,  refinery.doctors_doctor_path(doctor), :class => "blue" %></strong></p>									
+									
+				          <small>Horario: <%= doctor.schedule %><br>Consultorio: <%= doctor.location %></small>
 				        </div>
 				        <div class="clearfix"></div>
 
@@ -67,37 +68,12 @@
   			
   			<!--Right Side Bar-->
   			<div class="span3 sidebar-container">
+					<hr>
 					<%= raw @page.content_for(:side_body) %>
-  				<h2>Side Bar</h2>
-  				<p>Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  				<br />
-  				
   				<hr>
   				
-  				<h2>Instagram</h2>
-  				
-  				<!--Visit "Snapwidget.com" - Use Settings: 80px wide for images, 3x2 for the grid, and FadeOut on Hover-->
-					<!-- SnapWidget -->
-					<div style="height:200px;">
-					<iframe src="http://snapwidget.com/in/?u=amVmZmNvcmV5fGlufDgwfDN8Mnx8bm98NXxmYWRlT3V0"></iframe>
-					</div>
 					
-					<hr>
 					
-					<h2>Links</h2>
-					<ul class="unstyled blog-links">
-  				  <li><a href="http://www.themearmada.com"><i class="icon-angle-right"></i> Theme Armada</a></li>
-  				  <li><a href="http://www.twitter.com/themearmada"><i class="icon-angle-right"></i> Twitter Link</a></li>
-  				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Three</a></li>
-  				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Four</a></li>
-					</ul>
-					
-					<hr>
-					
-					<div class="boxed">
-					 <h2>Boxed</h2>
-					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc.</p>
-					</div>
 				
   			</div><!--End Span-->
   			
