@@ -1,4 +1,6 @@
 <% if post.live? %>
+<div class="row-fluid blog-article">
+
 <div class="span2 text-center">
   <div class="news-date">
   <h2><%=l post.published_at.to_date, :format => :day %></h2>
@@ -37,6 +39,7 @@
   
 <hr>
 	
+</div>
 </div>
 
 <% end %>
