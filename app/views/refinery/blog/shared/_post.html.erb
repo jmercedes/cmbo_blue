@@ -1,6 +1,5 @@
-<% if post.live? %>
 <div class="row-fluid blog-article">
-
+<% if post.live? %>
 <div class="span2 text-center">
   <div class="news-date">
   <h2><%=l post.published_at.to_date, :format => :day %></h2>
@@ -9,37 +8,37 @@
 </div>
 
 <div class="span10">
-  <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
-	
-	<% if blog_post_teaser_enabled? %>
-    <%= blog_post_teaser(post) %>
-  <% else %>
-    <%= post.body.html_safe %>
-  <% end %>
-
-	<%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>                                                                                                                                        
-
-	<% if Refinery::Blog::Post.comments_allowed? %>
-		<% if post.comments.any? %>
-		(<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %>)
-		<% else %>
-		(<%= t('none', :scope => 'refinery.blog.shared.comments') %>)
+	  <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
+		
+		<% if blog_post_teaser_enabled? %>
+	    <%= blog_post_teaser(post) %>
+	  <% else %>
+	    <%= post.body.html_safe %>
+	  <% end %>
+		
+		<%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
+		
+		<% if Refinery::Blog::Post.comments_allowed? %>
+			<% if post.comments.any? %>
+			(<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %>)
+			<% else %>
+			(<%= t('none', :scope => 'refinery.blog.shared.comments') %>)
+			<% end %>
 		<% end %>
-	<% end %>
-	
-	<% if (categories = post.categories).any? %>
+		
+		<% if (categories = post.categories).any? %>
 
-      <%= t('filed_in', :scope => 'refinery.blog.posts.show') %>
-      <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
-  <% end %>
-  <% if (tags = post.tags).any? %>
-      <%= t('tagged', :scope => 'refinery.blog.posts.show') %>
-      <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %>
-  <% end %>
-  
-<hr>
-	
+	      <%= t('filed_in', :scope => 'refinery.blog.posts.show') %>
+	      <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+	  <% end %>
+	  <% if (tags = post.tags).any? %>
+	      <%= t('tagged', :scope => 'refinery.blog.posts.show') %>
+	      <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %>
+	  <% end %>
+		
+		
+		<div class="clearfix"></div>
+		<hr>
 </div>
 </div>
-
 <% end %>
