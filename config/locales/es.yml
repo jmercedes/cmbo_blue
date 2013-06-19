@@ -3,6 +3,11 @@ es:
       formats:
           day: '%d'
           month: '%b'
+  time:
+      formats:
+          day: '%d'
+          month: '%b'
+              
   refinery:
     plugins:
       refinerycms_news:

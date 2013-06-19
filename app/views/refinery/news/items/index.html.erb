@@ -1,37 +1,62 @@
-<div class="clearfix">
+  <!--Content Section One-->
+    <section id="blog">
+    	<div class="container">
+    		<div class="row-fluid">
+        <div class="span12">
+          
+          <!--Bread Crumbs-->
+          <ul class="breadcrumb">
+            <li><a href="#">Home</a> <span class="divider">/</span></li>
+            <li><a href="#">Blog</a> <span class="divider">/</span></li>
+            <li class="active">Blog Article Title</li>
+          </ul>
+        </div>
+      </div>
 
-<% content_for :body_content_left do %>
-  <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) unless params[:page] %>
-  <section class="span9 inner_content dotted_right">
-  <% if @items.any? %>
-    <% @items.each do |item| %>
-      <article class="news_item_truncated">
-        <h2><%= link_to item.title, refinery.news_item_path(item) %></h2>
-        <p>
-          <small><%= t('.published') %> <%= l(item.publish_date, :format => :long) %></small>
-        </p>
-        <%= truncate  item.body, :length => 200,
-                      :omission => " ...",
-                      :preserve_html_tags => true %>
-        <%= link_to t('.read_more'), refinery.news_item_path(item), :class => "btn btn-primary" %>              
-      </article>
-    <hr>
-    <% end %>
-    
+      <div class="row-fluid"
 
-    <%= will_paginate @items %>
-  <% else %>
-    <p><em><%= t('.no_items_yet') %></em></p>
-  <% end %>
-</section>
-<% end -%>
+    			<!--Blog Article Container-->
+    			<div class="span9 article-container">
+    				<!--Article One -->
+						<%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) unless params[:page] %>
+						<% if @items.any? %>
+					    <% @items.each do |item| %>
 
-<% content_for :body_content_right_prepend do -%>
-<aside class="span2">
-  <%= raw @page.content_for(::Refinery::Pages.default_parts.second.to_sym) %>
-<% end if ::Refinery::Pages.default_parts.many? -%>
-<%= render :partial => '/refinery/news/shared/body_content_right' %>
-</aside> 
+					  
+    				<div class="row-fluid blog-article">
+		    			<div class="span2 text-center">
+                <div class="news-date">
+                <h2><%= l(item.publish_date, :format => :day) %></h2>
+                <h3><%= l(item.publish_date, :format => :month) %></h3>
+                </div>
+              </div>
+		    			
+		    			<div class="span10">
+								        <h2><%= link_to item.title, refinery.news_item_path(item) %></h2>
+								        <%= truncate  item.body, :length => 200,
+								                      :omission => " ...",
+								                      :preserve_html_tags => true %>
+								        <%= link_to t('.read_more'), refinery.news_item_path(item), :class => "btn btn-success" %>              
+								    <hr>
+								    <% end %>
+								    <%= will_paginate @items %>
+								  <% else %>
+								    <p><em><%= t('.no_items_yet') %></em></p>
+								 <% end %> 
+		    			</div>
+    				</div><!--End Article-->
+    			</div><!--End Blog Article Container-->
+          
+    			<!--Right Side Bar-->
+    			<div class="span3 sidebar-container">
+						<% content_for :body_content_right_prepend do -%>
+						  <%= raw @page.content_for(::Refinery::Pages.default_parts.second.to_sym) %>
+						<% end if ::Refinery::Pages.default_parts.many? -%>
+						<%= render :partial => '/refinery/news/shared/body_content_right' %>
+						<%= render :partial => "/refinery/content_page" %>
+    				<hr>
+    			</div><!--End Span-->
 
-<%= render :partial => "/refinery/content_page" %>
-</div>
+    		</div>
+    	</div>
+    </section>

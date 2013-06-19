@@ -1,100 +1,85 @@
-  <!--Content Section One-->
-    <section id="blog">
-    	<div class="container">
-    		<div class="row-fluid">
-        <div class="span12">
-          
-          <!--Bread Crumbs-->
-          <ul class="breadcrumb">
-            <li><a href="#">Home</a> <span class="divider">/</span></li>
-            <li class="active">Blog</li>
-          </ul>
-        </div>
+<!--Content Section One-->
+  <section id="blog">
+  	<div class="container">
+  		<div class="row-fluid">
+      <div class="span12">
+        
+        <!--Bread Crumbs-->
+        <ul class="breadcrumb">
+          <li><a href="#">Home</a> <span class="divider">/</span></li>
+          <li><a href="#">Blog</a> <span class="divider">/</span></li>
+          <li class="active">Blog Article Title</li>
+        </ul>
       </div>
-      
-      <div class="row-fluid"
-			<%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+    </div>
+    
+    <div class="row-fluid"
+  			
+  			<!--Blog Article Container-->
+  			<div class="span9 article-container">
+  				
+  				<!--Article One -->
+  				<div class="row-fluid blog-article">
+	
+						<%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
-		  <% if @posts.any? %>
-		    <section class="span9 inner_content dotted_right">
-		      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-		      <%= will_paginate @posts %>
-		    </section>
-		  <% else %>
-		    <p><%= t('.no_blog_articles_yet') %></p>
-		  <% end %>
-		  
-    			
-
-      </div><!--End Blog Article Container-->
-    			
-    			
-    			<!--Right Side Bar-->
-    			<div class="span3 sidebar-container">
-    				<h2>Side Bar</h2>
-    				<p>Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    				<br />
-    				
-    				<hr>
-    				
-    				<h2>Instagram</h2>
-    				
-    				<!--Visit "Snapwidget.com" - Use Settings: 80px wide for images, 3x2 for the grid, and FadeOut on Hover-->
-  					<!-- SnapWidget -->
-  					<div style="height:200px;">
-  					<iframe src="http://snapwidget.com/in/?u=amVmZmNvcmV5fGlufDgwfDN8Mnx8bm98NXxmYWRlT3V0"></iframe>
-  					</div>
-  					
-  					<hr>
-  					
-  					<h2>Links</h2>
-  					<ul class="unstyled blog-links">
-    				  <li><a href="http://www.themearmada.com"><i class="icon-angle-right"></i> Theme Armada</a></li>
-    				  <li><a href="http://www.twitter.com/themearmada"><i class="icon-angle-right"></i> Twitter Link</a></li>
-    				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Three</a></li>
-    				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Four</a></li>
-  					</ul>
-  					
-  					<hr>
-  					
-  					<div class="boxed">
-  					 <h2>Boxed</h2>
-  					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc.</p>
-  					</div>
+					  <% if @posts.any? %>
+					      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+					      <%= will_paginate @posts %>
+					  <% else %>
+					    <%= t('.no_blog_articles_yet') %>
+					  <% end %>
+					  
+						
+	    			
+  				</div><!--End Article-->
+  				
+  			</div><!--End Blog Article Container-->
+  			
+  			
+  			<!--Right Side Bar-->
+  			<div class="span3 sidebar-container">
+  				<h2>Side Bar</h2>
 					
-    			</div><!--End Span-->
-    			
-    		</div>
-    	</div>
-    </section>
-  
-
-
-
-
-<div class="row-fluid">
-	<div class="span12"> 	
-			<% content_for :body_content_left do %>
-			  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
-
-			  <% if @posts.any? %>
-			    <section class="span9 inner_content dotted_right">
-			      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
-			      <%= will_paginate @posts %>
-			    </section>
-			  <% else %>
-			    <p><%= t('.no_blog_articles_yet') %></p>
-			  <% end %>
-			<% end %>
-
-			<% content_for :body_content_right_prepend do -%>
-
-			  <%= raw @page.content_for(Refinery::Pages.default_parts.second.to_sym) %>
-			<% end if Refinery::Pages.default_parts.many? -%>
-			<%= render :partial => '/refinery/blog/shared/body_content_right' %>
-
-
-			<%= render :partial => "/refinery/content_page" %>
-			<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
-	</div>
-</div>
+					
+					  <%= raw @page.content_for(Refinery::Pages.default_parts.second.to_sym) %>
+					<% if Refinery::Pages.default_parts.many? -%>
+					<%= render :partial => '/refinery/blog/shared/body_content_right' %>
+					<% end %>
+					
+					<%= render :partial => "/refinery/content_page" %>
+					
+					
+  				
+  				<hr>
+  				
+  				<h2>Instagram</h2>
+  				
+  				<!--Visit "Snapwidget.com" - Use Settings: 80px wide for images, 3x2 for the grid, and FadeOut on Hover-->
+					<!-- SnapWidget -->
+					<div style="height:200px;">
+					<iframe src="http://snapwidget.com/in/?u=amVmZmNvcmV5fGlufDgwfDN8Mnx8bm98NXxmYWRlT3V0"></iframe>
+					</div>
+					
+					<hr>
+					
+					<h2>Links</h2>
+					<ul class="unstyled blog-links">
+  				  <li><a href="http://www.themearmada.com"><i class="icon-angle-right"></i> Theme Armada</a></li>
+  				  <li><a href="http://www.twitter.com/themearmada"><i class="icon-angle-right"></i> Twitter Link</a></li>
+  				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Three</a></li>
+  				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Four</a></li>
+					</ul>
+					
+					<hr>
+					
+					<div class="boxed">
+					 <h2>Boxed</h2>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc.</p>
+					</div>
+				
+  			</div><!--End Span-->
+  			
+  		</div>
+  	</div>
+  </section>

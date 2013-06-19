@@ -1,5 +1,4 @@
 <% content_for :body_content_right do %>
-	<div class="span3 aside_column">
   <%= yield(:body_content_right_prepend) %>
   <%= render :partial => "/refinery/blog/shared/rss_feed" %>
   <%= render :partial => "/refinery/blog/shared/categories" %>
@@ -7,5 +6,4 @@
   <%= render :partial => "/refinery/blog/shared/posts" %>
   <%= blog_archive_widget %>
   <%= yield(:body_content_right_append) %>
-	</div>
 <% end %>
