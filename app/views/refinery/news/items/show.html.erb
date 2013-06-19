@@ -1,31 +1,64 @@
-<div class="clearfix">
-	<div class="row-fluid">
+  <!--Content Section One-->
+    <section id="blog">
+    	<div class="container">
+    		<div class="row-fluid">
+        <div class="span12">
+          
+          <!--Bread Crumbs-->
+          <ul class="breadcrumb">
+            <li><a href="#">Home</a> <span class="divider">/</span></li>
+            <li><a href="#">Blog</a> <span class="divider">/</span></li>
+            <li class="active">Blog Article Title</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row-fluid"
+    			
+    			<!--Blog Article Container-->
+    			<div class="span9 article-container">
+   				
+    				<!--Article One -->
+    				<div class="row-fluid blog-article">
 
-			<% content_for :body_content_left do %>
 
-			<div class="span9 inner_content dotted_right">
-		  <% content_for :body_content_title, @item.title %>
-				<article class="news_item">
-					<p>
-						<small><%= t('.published') %> <%= l(@item.publish_date, :format => :long) %></small>
-					</p>
-					<% if @item.source.present? %>
-					<p>
-						<small><%= t('.source') %> <%= @item.source %></small>
-					</p>
-					<% end %>
-					<%= @item.body.html_safe %>
-					<p>
-						<%= link_to t('.back_to_index'), refinery.news_items_path %>
-					</p>
-				</article>
-			 </div>
-			<% end %>			
+		    			<div class="span2 text-center">
+                <div class="news-date">
+                <h2><%=l @item.publish_date, :format => :day %></h2>
+                <h3><%=l @item.publish_date, :format => :month %></h3>
+                </div>
+              </div>
+		    			
+		    			<div class="span10">
 
-		<% content_for :body_content_right, render(:partial => 'recent_posts_two') %>				
-		
-		<%= render :partial => "/refinery/content_page" %>
-		
+								  <h2><%= @item.title %></h2>
 
-	</div>
-</div>
+											<% if @item.source.present? %>
+											<%= t('.source') %> <%= @item.source %>
+											<% end %>
+											<%= @item.body.html_safe %>
+												<%= link_to t('.back_to_index'), refinery.news_items_path %>
+		    			</div>
+
+    				</div><!--End Article-->
+    				
+    			</div><!--End Blog Article Container-->
+    			
+    			
+    			<!--Right Side Bar-->
+    			<div class="span3 sidebar-container">
+					<%= render(:partial => 'recent_posts_two') %>	 
+    				<br />
+    				
+    				<hr>
+    				
+  					<div class="boxed">
+  					 <h2>Boxed</h2>
+  					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc.</p>
+  					</div>
+					
+    			</div><!--End Span-->
+    			
+    		</div>
+    	</div>
+    </section>
