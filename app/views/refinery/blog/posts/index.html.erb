@@ -36,42 +36,23 @@
     			
     			
     			<!--Right Side Bar-->
-    			<div class="span3 sidebar-container">
-    				<h2>Side Bar</h2>
-    				<p>Lorem <a href="#">ipsum dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+     			<div class="span3 sidebar-container">
+						<% content_for :body_content_right_prepend do -%>
+						  <%= raw @page.content_for(Refinery::Pages.default_parts.second.to_sym) %>
+						<% end if Refinery::Pages.default_parts.many? -%>
     				<br />
     				
     				<hr>
     				
-    				<h2>Instagram</h2>
-
-						<% content_for :body_content_right_prepend do -%>
-						  <%= raw @page.content_for(Refinery::Pages.default_parts.second.to_sym) %>
-						<% end if Refinery::Pages.default_parts.many? -%>
 						<%= render :partial => '/refinery/blog/shared/body_content_right' %>
 
-						<%= render :partial => "/refinery/content_page" %>
-						<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
-						
+
     				
-    				<!--Visit "Snapwidget.com" - Use Settings: 80px wide for images, 3x2 for the grid, and FadeOut on Hover-->
-  					<!-- SnapWidget -->
-  					
-  					<hr>
-  					
-  					<h2>Links</h2>
-  					<ul class="unstyled blog-links">
-    				  <li><a href="http://www.themearmada.com"><i class="icon-angle-right"></i> Theme Armada</a></li>
-    				  <li><a href="http://www.twitter.com/themearmada"><i class="icon-angle-right"></i> Twitter Link</a></li>
-    				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Three</a></li>
-    				  <li><a href="#"><i class="icon-angle-right"></i> Insert Link Four</a></li>
-  					</ul>
   					
   					<hr>
   					
   					<div class="boxed">
-  					 <h2>Boxed</h2>
-  					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inc.</p>
+						 <%= render :partial => '/refinery/blog/shared/rss_feed' %>
   					</div>
 					
     			</div><!--End Span-->

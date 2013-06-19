@@ -1,3 +1,6 @@
+
+
+
 <% flash.each do |key, value| %>
  <div id='flash' class="flash flash_<%= key %>">
    <%= value %>
@@ -5,7 +8,7 @@
 <% end %>
 <article id="blog_post">
   <header>
-    <h1><%= @post.title %></h1>
+    <h2><%= @post.title %></h2>
     <section class='details'>
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
         <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>

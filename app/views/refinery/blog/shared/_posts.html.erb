@@ -1,8 +1,8 @@
 <% if @posts.many? %>
-  <h2><%= t('.other') %></h2>
-  <ul id="blog_posts">
+  <h3><%= t('.other') %></h3>
+  <ul id="unstyled blog-links">
     <% @posts.each do |blog_post| %>
-      <li class='clearfix'>
+      <li>
         <%= link_to blog_post.title, refinery.blog_post_path(blog_post) %>
       </li>
     <% end %>

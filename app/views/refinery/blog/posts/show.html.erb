@@ -1,17 +1,64 @@
-<% content_for :body_content_left do %>
-  <div id="show_blog_post">
-    <%= render 'post' %>
-  </div>
+  <!--Content Section One-->
+    <section id="blog">
+    	<div class="container">
+    		<div class="row-fluid">
+        <div class="span12">
+          
+          <!--Bread Crumbs-->
+          <ul class="breadcrumb">
+            <li><a href="#">Home</a> <span class="divider">/</span></li>
+            <li><a href="#">Blog</a> <span class="divider">/</span></li>
+            <li class="active">Blog Article Title</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row-fluid"
+    			
+    			<!--Blog Article Container-->
+    			<div class="span9 article-container">
+    				
+    				<!--Article One -->
+    				<div class="row-fluid blog-article">
+		    			<div class="span2 text-center">
+                <div class="news-date">
+                <h2>15</h2>
+                <h3>MAR</h3>
+                </div>
+              </div>
+		    			
+		    			<div class="span10">
+								<%= render 'post' %>
+								
+								<hr>
+								
+								<% if Refinery::Blog::Post.comments_allowed? %>
+							    <%= render 'comments'%>
+							  <% end %>
+							  		    				
+		    				
 
-  <% if Refinery::Blog::Post.comments_allowed? %>
-    <%= render 'comments'%>
-  <% end %>
-<% end %>
-
-<%= render :partial => '/refinery/blog/shared/body_content_right' %>
-
-<%= render :partial => "/refinery/content_page", :locals => { :remove_automatic_sections => true }  %>
-
+		    			</div>
+    				</div><!--End Article-->
+    				
+    			</div><!--End Blog Article Container-->
+    			
+    			
+    			<!--Right Side Bar-->
+    			<div class="span3 sidebar-container">
+						
+						<%= render :partial => '/refinery/blog/shared/body_content_right' %>
+    				
+    				<hr>    				
+  										
+    			</div><!--End Span-->
+    			
+    		</div>
+    	</div>
+    </section>
+  
+  
+  
 <% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
 <% content_for :javascripts do %>
   <%# enable AJAX'd post nav at your own risk until html5 history API implemented. %>
