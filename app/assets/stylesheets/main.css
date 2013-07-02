@@ -132,6 +132,52 @@ iframe {
   position: static;
 }
 
+/*----------------------------------*/
+
+#timeline_list {
+	padding:30px 0 30px 0;
+}
+
+
+#timeline_list li {
+	display:inline;
+	list-style-type:none;
+	padding-right:40px;
+	font-size:24px;
+}
+
+#timeline_list li a{
+	color:#fff;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: block;
+  width: 120px;
+  height: 23px;
+  margin-left: 10px;
+  padding-top:5px;
+  text-indent: 7px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  font-size:1em;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+
+/*----------------------------------*/
 
 
 /*------colors--------------------*/
@@ -346,6 +392,13 @@ a.login {
 
 
 /*------Header Image One---------*/
+.special {
+  background:#0088CC;
+  background-size: cover;
+}
+
+
+/*------Header Image One---------*/
 .one {
   background: url(header_test.jpg) no-repeat center center;
   background-size: cover;
@@ -434,6 +487,12 @@ a.login {
   background: #7BC143;
   padding-bottom: 40px;
   padding-top: 40px;
+}
+
+#message3 {
+background: #7BC143;
+padding-bottom: 25px;
+padding-top: 0px;
 }
 
 #message2 {

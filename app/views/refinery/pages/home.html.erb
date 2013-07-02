@@ -65,21 +65,14 @@
       
       <!--Service Section One-->
       <div class="span3 text-center service-box">
-        <a href="#">
-          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
-
-          <h3>Unidos a una noble Causa</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
-        </a>
+          <% @items = Refinery::News::Item.latest(1) %>
+					<%= render :partial => '/refinery/news/items/recent_posts' %>
       </div>
       
       <!--Service Section Two-->
       <div class="span3 text-center service-box">
-        <a href="#">
-          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
-          <h3>Únete a nuestro club de donantes</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
-        </a>
+				<% @blog_posts = Refinery::Blog::Post.live.limit(1) %>
+				<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %>
       </div>
       
       <!--Service Section Three-->
@@ -93,11 +86,8 @@
       
       <!--Service Section Three-->
       <div class="span3 text-center service-box">
-        <a href="#">
-          <!-- <i class="icon-thumbs-up icon-4x blue"></i> -->
-          <h3>Conoce todo sobre el Asma</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
-        </a>
+				<% @blog_posts = Refinery::Blog::Post.live.limit(1) %>
+				<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %>
       </div>
 
     </div>

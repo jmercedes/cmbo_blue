@@ -1,92 +1,216 @@
-<div class="content">
+<!--Main Content-->
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span12">
+        
+        <!--Bread Crumbs-->
+        <ul class="breadcrumb">
+          <li><a href="#">Home</a> <span class="divider">/</span></li>
+          <li class="active">About</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <%= raw @page.content_for(:body) %>
+      </div>
+    </div>
+    
+  </div>
 
-	
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="js/jquery.timelinr-0.9.53.js"></script>
-	<script>
-		$(function(){
-			$().timelinr({
-				arrowKeys: 'true'
-			})
-		});
-	</script>
+<!-- Carousel -->
 
-<body>
+<div id="myCarousel" class="carousel slide animated fadeIn">
+	<section id="message3">
+	  <div class="container">
+	    <div class="row-fluid">
+	      <div class="span12 text-center">
+					<ol class="carousel-indicators">
+					  <li data-target="#myCarousel" data-slide-to="0" class="active">1973</li>
+					  <li data-target="#myCarousel" data-slide-to="1">1983</li>
+					  <li data-target="#myCarousel" data-slide-to="2">1985</li>
+					  <li data-target="#myCarousel" data-slide-to="3">1995/1997</li>
+					  <li data-target="#myCarousel" data-slide-to="4">2003</li>
+					  <li data-target="#myCarousel" data-slide-to="5">2004</li>
+					  <li data-target="#myCarousel" data-slide-to="6">2009</li>
+					  <li data-target="#myCarousel" data-slide-to="7">2013</li>
+					</ol>
+	      </div>
+	    </div>
+	  </div>
+	</section>
 	
-	<div id="timeline">
-		<ul id="dates">
-			<li><a href="#1900">1900</a></li>
-			<li><a href="#1930">1930</a></li>
-			<li><a href="#1944">1944</a></li>
-			<li><a href="#1950">1950</a></li>
-			<li><a href="#1971">1971</a></li>
-			<li><a href="#1977">1977</a></li>
-			<li><a href="#1989">1989</a></li>
-			<li><a href="#1999">1999</a></li>
-			<li><a href="#2001">2001</a></li>
-			<li><a href="#2011">2011</a></li>
-		</ul>
-		<ul id="issues">
-			<li id="1900">
-				<img src="<%= image_tag "10" %>" width="256" height="256" />
-				<h1>1900</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1930">
-				<img src="2.png" width="256" height="256" />
-				<h1>1930</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1944">
-				<img src="3.png" width="256" height="256" />
-				<h1>1944</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1950">
-				<%= image_tag "images/10.png", :height => 256, :width => 256 %>
-				<h1>1950</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1971">
-				<img src="5.png" width="256" height="256" />
-				<h1>1971</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1977">
-				<img src="6.png" width="256" height="256" />
-				<h1>1977</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1989">
-				<img src="7.png" width="256" height="256" />
-				<h1>1989</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1999">
-				<img src="8.png" width="256" height="256" />
-				<h1>1999</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="2001">
-				<img src="9.png" width="256" height="256" />
-				<h1>2001</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="2011">
-				<img src="<%= image_tag "10" %>" width="256" height="256" />
-				<h1>2011</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-		</ul>
-		<div id="grad_left"></div>
-		<div id="grad_right"></div>
-		<a href="#" id="next">+</a>
-		<a href="#" id="prev">-</a>
-	</div>
-	
-	<h1>CSSLab.cl - jQuery Timelinr 0.9.53 - Horizontal <a href="http://www.csslab.cl/2011/08/18/jquery-timelinr/" title="Volver al artículo original">[Volver/Back]</a></h1>
-	<h2>&copy; 2013 CSSLab.cl</h2>
+  
+  <div class="carousel-inner">
+    
+    <!--Item One-->
+    <div class="item one active">
+      <div class="container animated fadeInUp">
+        <div class="carousel-caption">
+	          <h1>1973</h1>
+	          <h3>
+	 				  	El 25 de Octubre 1973,
+							se inaugura el CENTRO
+							MÉDICO PUERTO PLATA,
+							S.A., hoy día CENTRO
+							MÉDICO BOURNIGAL,
+							S.A. Pionero en tener
+							médicos graduados en
+							distintas especialidades
+							en esta región.
+					 </h3>
+        </div>
+      </div>
+    </div>
+    
+    <!--Item Two-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>1983</h1>
+          <h3>El 1ro. de Abril 1983,
+					la institución pasa a ser propiedad
+					de una nueva corporación, liderada
+					por la Familia Redondo, con el Sr. José
+					J. Redondo como presidente.
+					En reconocimiento a la labor científica
+					y profesional de su fundador, la nueva
+					institución adquiere el nombre de
+					CENTRO MÉDICO BOURNIGAL.
+					También inicia la gestión internacional
+					de lo que hoy se conoce como
+					Grupo Rescue.</h3>
+        </div>
+      </div>
+    </div>
+    
+    <!--Item Three-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>1985</h1>
+          <h3>En 1985 el CENTRO
+					MÉDICO BOURNIGAL
+					logra un crecimiento
+					espectacular, afirmando
+					su protagonismo en los
+					servicios médicos de la
+					región, concomitantemente
+					al desarrollo sostenido del
+					destino turístico
+					Puerto Plata.
+					En la década de los 80’s el
+					hospital creció cerca de un
+					240% en 5 años.</h3>
+        </div>
+      </div>
+    </div>
 
-</div> 
+    <!--Item Three-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>1995/1997</h1>
+          <h3>En Abril del 1995 la corporación
+					inaugura la Clínica de Urgencias
+					PLAYA DORADA MEDICAL CARE.
+					En 1997 se apertura la Clínica
+					SERVIMED COSTA NORTE. Ambas
+					instituciones han servido de
+					apoyo logístico para los servicios
+					médicos integrales al destino
+					turístico Puerto Plata.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Item Three-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>2003</h1>
+          <h3>En el 2003 el grupo se
+					expande a todo el país
+					con la incorporación de
+					GRUPO RESCUE, la red
+					nacional de Servicios
+					Médicos más completa
+					de la región.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Item Three-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>2004</h1>
+          <h3>En Marzo del 2004 se
+					inaugura el CENTRO
+					MÉDICO PUNTA CANA,
+					en el destino del mismo
+					nombre, con la misma
+					visión de proveer servicios
+					médicos de calidad a los
+					residentes y visitantes
+					de la zona.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Item Three-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>2009</h1>
+          <h3>En el 2009 se inicia el
+					programa oficial de educación
+					médica especializada, con la
+					apertura de la RESIDENCIA DE
+					EMERGENCIOLOGIA Y
+					MEDICINA DE DESASTRES.
+					Con esto se completa el
+					esquema del Instituto de
+					Salud. (Asistencia –
+					Investigación Clínica –
+					Enseñanza Especializada).</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Item Three-->
+    <div class="item tback">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>2013</h1>
+          <h3>En el 2013 se avanza
+					considerablemente en el proceso de
+					reestructuración y ampliación física, la
+					organización funcional dependiente de
+					la gestión corporativa, y el desarrollo
+					de nuevas áreas de servicios;
+					confirmando el liderazgo indiscutible
+					de la institución a través de SU MARCA,
+					al Centro Médico Bournigal cumplir sus
+					40 años de servicios y 30 años de
+					experiencia en el mercado
+					internacional de lo que hoy se conoce
+					como Grupo Rescue.</h3>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+
+<!-- 
+  <a class="left carousel-control hidden-phone" href="#header" data-slide="prev"><i class="icon-angle-left"></i></a>
+  <a class="right carousel-control hidden-phone" href="#header" data-slide="next"><i class="icon-angle-right"></i></a>
+-->
+</div><!-- /.carousel -->
+
+
 
