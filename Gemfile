@@ -47,6 +47,7 @@ gem 'jquery-rails', '~> 2.0.0'
 gem 'bootstrap-will_paginate'
 gem 'rails_bootstrap_navbar'
 gem 'font-awesome-rails'
+gem 'nokogiri'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
