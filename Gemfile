@@ -48,6 +48,7 @@ gem 'bootstrap-will_paginate'
 gem 'rails_bootstrap_navbar'
 gem 'font-awesome-rails'
 gem 'nokogiri'
+gem 'refinerycms-videojs'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

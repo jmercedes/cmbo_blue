@@ -207,6 +207,10 @@ GEM
       refinerycms-core (~> 2.0.4)
     refinerycms-settings (2.0.2)
       refinerycms-core (~> 2.0.1)
+    refinerycms-videojs (0.5.5.1)
+      dragonfly
+      rack-cache
+      refinerycms-core
     routing-filter (0.3.1)
       actionpack
     ruby-hmac (0.4.0)
@@ -265,6 +269,7 @@ DEPENDENCIES
   refinerycms-news (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
   refinerycms-search (~> 2.0.0)
+  refinerycms-videojs
   sass-rails (~> 3.2.3)
   sqlite3
   twitter-bootstrap-rails
