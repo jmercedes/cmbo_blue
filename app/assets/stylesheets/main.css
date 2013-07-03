@@ -334,7 +334,12 @@ a.login {
 .image_border {
 	border-radius: 2px;
 	border:#84CCD3 4px solid;
-	width: 100%;
+}
+
+.image_border_thumb {
+	border-radius: 2px;
+	border:#84CCD3 4px solid;
+	width:84px;
 }
 
 
