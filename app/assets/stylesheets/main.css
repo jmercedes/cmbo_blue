@@ -334,6 +334,7 @@ a.login {
 .image_border {
 	border-radius: 2px;
 	border:#84CCD3 4px solid;
+	width: 100%;
 }
 
 
@@ -394,7 +395,7 @@ a.login {
 
 /*------Header Image One---------*/
 .special {
-  background:#0088CC;
+  background: url(header_test.jpg) no-repeat center center;
   background-size: cover;
 }
 
