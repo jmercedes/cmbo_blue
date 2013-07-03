@@ -6,16 +6,13 @@
         
         <!--Bread Crumbs-->
         <ul class="breadcrumb">
-          <li><a href="#">Home</a> <span class="divider">/</span></li>
-          <li class="active">About</li>
+          <li></li>
         </ul>
       </div>
     </div>
     
     <div class="row-fluid">
       <div class="span12">
-        <h2>About Us</h2>
-        <p class="lead">Learn About Who We Are</p>
         <p><%= raw @page.content_for(:body) %> </p><br />
       </div>
     </div>
@@ -79,29 +76,3 @@
     </div>
   </div>
 </section>
-
-
-
-<!--Main Content-->
-<section id="content">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="span12">
-        
-        <!--Bread Crumbs-->
-        <ul class="breadcrumb">
-          <li></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="row-fluid">
-      <div class="span12">
-        <%= raw @page.content_for(:body) %>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-
