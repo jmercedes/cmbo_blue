@@ -342,6 +342,14 @@ a.login {
 	width:84px;
 }
 
+.bio_desc{
+	margin-top:20px;
+}
+
+.bio_desc p{
+	margin-top:20px;
+}
+
 
 .menu-button {
   background: #84CCD3 repeat scroll 0 0;

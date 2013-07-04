@@ -14,8 +14,48 @@
     </div>
 </section>
 
-<ul>
+
   <% @page.children.each do |child| %>
-      <li><%= link_to child.title, child.url %></li>
-  <% end %>
-</ul>
+      <%= link_to child.title, child.url %>
+			<%= child.content_for(:body) %>
+  <% end %> 
+
+  <!--Clients Section-->
+  <section id="team">
+  <div class="image-break"> </div>
+    <div class="container">
+      
+      <div class="row-fluid">
+        <div class="span12">
+          <h2>Our Team</h2>
+          <p class="lead">The Superstars That Make Things Happen</p>
+        </div>
+      </div>
+      
+      <div class="row-fluid">
+        
+        <!--Team Member One-->
+			  <% @page.children.each do |child| %>
+        <div class="span3">
+					<% f = child.content_for(:body) %>
+					<% doc = Nokogiri::HTML(f) %>
+					<% img_srcs = doc.css('img').map{ |i| i['src'] } %>
+          <img src=<%= img_srcs[0] %> /> 
+          <div class="title-box text-center">
+            <p><%= link_to child.title, child.url %>
+			      <span class="dark-gray"><em>CEO</em></span></p>
+          </div>
+					<div class="bio_desc">
+						<% intro = doc.at_css('p') %>
+						<%= raw truncate intro, :length => 100,
+						 																					 :omission => "...",
+						 																					 :preserve_html_tags => true %>
+						<p><%= link_to "Leer más ...", child.url %><p>
+  				</div>
+        </div>
+			  <% end %> 
+        
+        
+      </div>
+    </div>
+  </section>
