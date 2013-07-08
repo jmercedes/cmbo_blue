@@ -21,12 +21,17 @@ p {
 }
 
 .lead {
-  color: #84CCD3;
+  color: #7BC143;
 }
 
 h2, h3 {
   font-family: 'Lato', sans-serif;
 }
+
+h1 {
+  font-family: 'Lato', sans-serif;
+}
+
 
 h2 {
   color: #5D5D5D;
@@ -62,7 +67,7 @@ a:hover {
 }
 
 .btn-main {
-  background: #84CCD3 repeat scroll 0 0;
+  background: #7BC143 repeat scroll 0 0;
   font-family: 'Lato', sans-serif;
   border-bottom: 5px solid #69ACAF;
   border-radius: 2px;
@@ -84,7 +89,7 @@ a:hover {
 }
 
 .btn-main-small {
-  background: #84CCD3 repeat scroll 0 0;
+  background: #7BC143 repeat scroll 0 0;
   font-family: 'Lato', sans-serif;
   border-bottom: 5px solid #69ACAF;
   border-radius: 2px;
@@ -112,11 +117,11 @@ a:hover {
 }
 
 ::selection {
-	background: #84CCD3; /* Safari */
+	background: #7BC143; /* Safari */
 	color: #FFFFFF;
 }
 ::-moz-selection {
-	background: #84CCD3; /* Firefox */
+	background: #7BC143; /* Firefox */
 	color: #FFFFFF;
 }
 
@@ -234,7 +239,7 @@ iframe {
 
 .navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
   background-color: transparent;
-  color: #84CCD3;
+  color: #7BC143;
 }
 
 .brand {
@@ -255,13 +260,13 @@ iframe {
 }
 
 .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
-  border-bottom-color: #84CCD3;
-  border-top-color: #84CCD3;
+  border-bottom-color: #7BC143;
+  border-top-color: #7BC143;
 }
 
 .navbar-inverse .nav li.dropdown > a:hover .caret, .navbar-inverse .nav li.dropdown > a:focus .caret {
-  border-bottom-color: #84CCD3;
-  border-top-color: #84CCD3;
+  border-bottom-color: #7BC143;
+  border-top-color: #7BC143;
 }
 
 .navbar-fixed-top {
@@ -316,7 +321,7 @@ a.login {
     background-image: none;
     background-image: -webkit-linear-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(transparent));
     background-repeat: no-repeat;
-    color: #84CCD3;
+    color: #7BC143;
     text-decoration: none;
 }
 
@@ -333,12 +338,12 @@ a.login {
 
 .image_border {
 	border-radius: 2px;
-	border:#84CCD3 4px solid;
+	border:#7BC143 4px solid;
 }
 
 .image_border_thumb {
 	border-radius: 2px;
-	border:#84CCD3 4px solid;
+	border:#7BC143 4px solid;
 	width:84px;
 }
 
@@ -352,7 +357,7 @@ a.login {
 
 
 .menu-button {
-  background: #84CCD3 repeat scroll 0 0;
+  background: #7BC143 repeat scroll 0 0;
   font-family: 'Lato', sans-serif;
   border-bottom: none;
   border-radius: 2px;
@@ -616,7 +621,7 @@ padding-top: 0px;
 
 .progress .bar {
   -moz-box-sizing: border-box;
-  background-color: #84CCD3;
+  background-color: #7BC143;
   background-image: none;
   background-repeat: repeat-x;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
@@ -643,7 +648,7 @@ padding-top: 0px;
   right: -8px;
   border-style: solid;
   border-width: 8px 0 8px 8px;
-  border-color: transparent #84CCD3;
+  border-color: transparent #7BC143;
   display: block;
   width: 0;
   z-index: 1;
@@ -725,7 +730,7 @@ padding-top: 0px;
 }
 
 .title-box {
-  background: #84CCD3;
+  background: #7BC143;
   padding: 6px;
   background-size: contain;
   position: relative;
@@ -739,7 +744,7 @@ bottom: -15px;
 left: 44%;
 border-style: solid;
 border-width: 15px 15px 0;
-border-color: #84CCD3 transparent;
+border-color: #7BC143 transparent;
 display: block;
 width: 0;
 z-index: 1;
@@ -767,7 +772,7 @@ ul.team-social-icons li {
 }
 
 ul.team-social-icons li a {
-	color: #84CCD3;
+	color: #7BC143;
 	text-decoration: none;
 }
 
@@ -854,7 +859,7 @@ ul.team-social-icons li a:hover {
 }
 
 .blog-links a {
-  color: #84CCD3;
+  color: #7BC143;
 	text-decoration: none;
 }
 
@@ -883,7 +888,7 @@ ul.team-social-icons li a:hover {
 }
 
 .news-date h2 {
-    color: #84CCD3;
+    color: #7BC143;
     font-family: 'Lato', sans-serif;
     font-size: 40px;
     font-weight: 300;
@@ -1031,7 +1036,7 @@ select, input[type="text"], input[type="password"], input[type="datetime"], inpu
 }
 
 .btn-info {
-    background-color: #84CCD3;
+    background-color: #7BC143;
     background-image: none;
     background-repeat: repeat-x;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -1100,7 +1105,7 @@ ul.icons li {
 
 
 .headline {
-  background: #84CCD3;
+  background: #7BC143;
   padding: 6px 6px 0px 6px;
   background-size: contain;
   position: relative;
@@ -1118,7 +1123,7 @@ bottom: -15px;
 left: 44%;
 border-style: solid;
 border-width: 15px 15px 0;
-border-color: #84CCD3 transparent;
+border-color: #7BC143 transparent;
 display: block;
 z-index: 1;
 }
@@ -1167,7 +1172,7 @@ z-index: 1;
 /*------Tables--------------------*/
 
 .table thead {
-  background: #84CCD3;
+  background: #7BC143;
   color: #fff;
 }
 
@@ -1175,11 +1180,11 @@ z-index: 1;
 /*------Tabs--------------------*/
 
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-    border-color: #84CCD3 #84CCD3 #DDDDDD;
+    border-color: #7BC143 #7BC143 #DDDDDD;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-    background-color: #84CCD3;
+    background-color: #7BC143;
     text-decoration: none;
     color: #FFFFFF;
 }
@@ -1188,7 +1193,7 @@ z-index: 1;
 /*------Collapse--------------------*/
 
 .accordion-heading {
-    background: none repeat scroll 0 0 #84CCD3;
+    background: none repeat scroll 0 0 #7BC143;
     border-bottom: 0 none;
     color: #FFFFFF;
 }
@@ -1260,7 +1265,7 @@ ul#twitter_update_list li {
 }
 
 .twitter-feed span a {
-	color: #84CCD3;
+	color: #7BC143;
 	text-decoration: none;
 	
 }
@@ -1300,7 +1305,7 @@ ul.social-icons li a {
 }
 
 ul.social-icons li a:hover {
-	color: #84CCD3;
+	color: #7BC143;
 	text-decoration: none;
 }
 
@@ -1338,7 +1343,7 @@ ul.footer-links li a {
 }
 
 ul.footer-links li a:hover {
-  color: #84CCD3;
+  color: #7BC143;
   text-decoration: none;
 }
 
@@ -1433,7 +1438,7 @@ h3 {
 }
 
 .news-date h2 {
-    color: #84CCD3;
+    color: #7BC143;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 300;
