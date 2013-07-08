@@ -31,8 +31,9 @@
         <div class="span3">
 					<%= raw child.content_for(:pic) %>
           <div class="title-box text-center">
-            <p><%= link_to child.title, child.url %>
-			      <span class="dark-gray"><em>CEO</em></span></p>
+						<% name_position = child.title.split("|") %>
+            <p><%= link_to name_position[0], child.url %><br>
+			      <span class="dark-gray"><em><%= name_position[1] %></em></span></p>
           </div>
 					<div class="bio_desc">
 						<%= raw truncate child.content_for(:body), :length => 100,
