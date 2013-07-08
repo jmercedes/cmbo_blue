@@ -1486,6 +1486,11 @@ body {
     padding-top: 20px;
 }
 
+#content2 {
+	padding-bottom: 20px;
+	padding-top: 120px;
+}
+
 .carousel .item {
   height: 400px;
 }
