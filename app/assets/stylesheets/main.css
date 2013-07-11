@@ -411,9 +411,58 @@ a.login {
   height: 600px;
 }
 
+.carousel-caption h1{
+	 color:#FFFFFF;
+}
 
+
+.carousel-caption h3{
+	 color:#FFFFFF;
+	 text-shadow: 1px 1px #0088CC;
+}
 
 /*------Header Image One---------*/
+
+.un {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDUvMTIzL3MxLmpwZyJdXQ/s1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.deux {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDYvMTMzL3MyLmpwZyJdXQ/s2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.troi {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDcvMzM2L3MzLmpwZyJdXQ/s3.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.quatre {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDcvMTcvczQuanBnIl1d/s4.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.cinq {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDgvNDQ0L3M1LmpwZyJdXQ/s5.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.six {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDgvOTY0L3M2LmpwZyJdXQ/s6.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.sept {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDkvMzc0L3M3LmpwZyJdXQ/s7.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.huite {
+  background: url(http://pacific-atoll-6355.herokuapp.com/system/images/W1siZiIsIjIwMTMvMDcvMTEvMjAvMTIvNDkvMjQ3L3M4LmpwZyJdXQ/s8.jpg) no-repeat center center;
+  background-size: cover;
+}
+
 .special {
   background: url(header_hand.jpg) no-repeat center center;
   background-size: cover;
