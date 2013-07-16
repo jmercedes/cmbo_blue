@@ -6,9 +6,6 @@
         
         <!--Bread Crumbs-->
         <ul class="breadcrumb">
-          <li><a href="#">Home</a> <span class="divider">/</span></li>
-          <li><a href="#">Blog</a> <span class="divider">/</span></li>
-          <li class="active">Blog Article Title</li>
         </ul>
       </div>
     </div>
@@ -29,8 +26,8 @@
 							<div class="span6">
 								 <h2><%= @doctor.prefix + ' ' + @doctor.full_name %></h2>
 								 <h4><%= @doctor.specialty %></h4>
-								 <p><strong>Horario: </strong><br><%=raw @doctor.schedule %><br></p>
-						     <p><strong>Consultorio:</strong><br><%=raw @doctor.location %></p>
+								 <strong>Horario: </strong><br><%=raw @doctor.schedule %><br>
+						     <strong>Consultorio:</strong><br><%=raw @doctor.location %>
 						     <strong>Biografía:</strong><%=raw @doctor.bio %>
 						    
 							</div>

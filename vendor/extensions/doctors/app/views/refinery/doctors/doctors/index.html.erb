@@ -6,9 +6,6 @@
         
         <!--Bread Crumbs-->
         <ul class="breadcrumb">
-          <li><a href="#">Home</a> <span class="divider">/</span></li>
-          <li><a href="#">Blog</a> <span class="divider">/</span></li>
-          <li class="active">Blog Article Title</li>
         </ul>
       </div>
     </div>
@@ -50,7 +47,8 @@
 									</h3>
 									<p><strong><%= link_to doctor.specialty,  refinery.doctors_doctor_path(doctor), :class => "blue" %></strong></p>									
 									
-				          <small>Horario: <%= doctor.schedule %><br>Consultorio: <%= doctor.location %></small>
+				          <small>Horario: <%= doctor.schedule %><br>Consultorio: <%= doctor.location %>, 
+				          <%= link_to "leer más...", refinery.doctors_doctor_path(doctor) %></small>
 				        </div>
 				        <div class="clearfix"></div>
 
