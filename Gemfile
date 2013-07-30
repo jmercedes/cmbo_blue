@@ -20,7 +20,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 #gem 'libv8', :platforms => :ruby
-#gem 'therubyracer', :require => 'v8', :platforms => :ruby
+gem 'therubyracer', :require => 'v8', :platforms => :ruby
 
 
 
@@ -29,7 +29,7 @@ end
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  #gem 'less-rails'
+  gem 'less-rails'
   gem 'twitter-bootstrap-rails'
   #gem 'therubyracer'
 
