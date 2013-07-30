@@ -21,6 +21,16 @@
              </div>
 	    			
 	    			<div class="span10">
+						
+						  <%= form_tag refinery.search_path do -%>
+				        <%= text_field_tag :query, {}, {:type => "search",
+				                                        :placeholder => "Buscar",
+				                                        :value => (params[:query] if params[:query])} %>
+				        <%= submit_tag 'Go' %>
+				      <% end %>
+
+				    
+						
 						<h2>Consuta con nuestro especialistas</h2>
 							<%= form_tag refinery.find_all_doctors_by_branch_path do %>
 				        <%= select_tag "find_branch_doctors", options_for_select(@all_doctor_branch, @selected_branch_doctors),
